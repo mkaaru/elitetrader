@@ -1,1 +1,2484 @@
-"use strict";(self.webpackChunkbot=self.webpackChunkbot||[]).push([["394"],{71035:function(e,t,n){n.r(t),n.d(t,{default:()=>tu});var l=n("85893"),i=n("67294"),o=n("67026"),a=n("92198"),s=n("89250"),r=n("30453"),c=n("37979"),d=n("2502"),u=n("89471");let h=function(){let e=(0,s.TH)(),t=(0,s.s0)();return{deleteQueryString:function(n){let l=new URLSearchParams(e.search);l.delete(n),t({search:l.toString()},{replace:!0})},queryString:function(){let t=new URLSearchParams(e.search),n={};return t.forEach((e,t)=>{n[t]=e}),n}(),setQueryString:function(n){!function(n){let l=new URLSearchParams(e.search);Object.entries(n).forEach(e=>{let[t,n]=e;void 0===n?l.delete(t):l.set(t,n)}),t({search:l.toString()},{replace:!0})}(n)}}};function m(e){let{deleteQueryString:t,queryString:n,setQueryString:l}=h(),{isDesktop:o}=(0,d.F)(),[a,s]=(0,u.Sx)(),r=()=>{if(!n.modal&&s.setAll([]),(null==e?void 0:e.shouldReinitializeModals)!==void 0&&!1===e.shouldReinitializeModals)t("modal");else{let e=n.modal;if(e){let t=e.split(","),n=t.slice(-1)[0];s.setAll([]),t.forEach(e=>{s.set(e,!o)}),s.set(n,!0)}}};return(0,i.useEffect)(()=>{r()},[]),(0,i.useEffect)(()=>{!(null==n?void 0:n.modal)&&s.reset()},[null==n?void 0:n.modal]),(0,u.OR)("popstate",()=>{r()}),{hideModal:e=>{let i=n.modal;if(i){let n=i.split(",");if(null==e?void 0:e.shouldHideAllModals)a.forEach((e,n)=>{s.set(n,!1),t("modal")});else if(null==e?void 0:e.shouldHidePreviousModals){if(n.length>1){let e=n.shift();n.forEach(e=>{s.set(e,!1)}),n=[e??""],l({modal:e})}else 1===n.length?l({modal:n[0]}):t("modal")}else{let e=n.pop(),i=n.slice(-1)[0];i?(s.set(e,!1),s.set(i,!0)):s.set(e,!1),0===n.length?t("modal"):l({modal:n.join(",")})}}},isModalOpenFor:e=>a.get(e)||!1,showModal:(e,t)=>{let i=n.modal;if(i){let n=i.split(","),a=n.slice(-1)[0];if(a===e)return;(null==t?void 0:t.shouldStackModals)===!1?s.set(a,!1):s.set(a,(null==t?void 0:t.shouldStackModals)||!o),s.set(e,!0),n.push(e),l({modal:(null==t?void 0:t.shouldClearPreviousModals)?e:n.join(",")})}else s.set(e,!0),l({modal:e})}}}let g=()=>{let e=localStorage.getItem("active_tab"),t=["dashboard","bot_builder","chart","tutorial"],n=t[Number(e)],l=window.location.href.split("#")[0];return`${l}#${n}`};var x=n("32305"),p=n("96223"),v=n("3693"),_=n("98146"),b=n("64410"),j=n("918"),f=n("50051"),w=n("16496"),y=n("59001"),C=n("57218"),I=n("12811"),N=n("28505"),Z=n("73971"),L=n("99243"),k=n("63066"),z=n("96396"),S=n("14249"),M=n("45322"),E=n("34273"),F=n("473");let T=[{code:"EN",displayName:"English",icon:(0,l.jsx)(x.Z,{height:24,width:36}),placeholderIcon:(0,l.jsx)(x.Z,{height:12,width:18}),placeholderIconInMobile:(0,l.jsx)(x.Z,{height:14.67,width:22})},{code:"AR",displayName:"العربية",icon:(0,l.jsx)(p.Z,{height:24,width:36}),placeholderIcon:(0,l.jsx)(p.Z,{height:12,width:18}),placeholderIconInMobile:(0,l.jsx)(p.Z,{height:14.67,width:22})},{code:"BN",displayName:"বাংলা",icon:(0,l.jsx)(v.Z,{height:24,width:36}),placeholderIcon:(0,l.jsx)(v.Z,{height:12,width:18}),placeholderIconInMobile:(0,l.jsx)(v.Z,{height:14.67,width:22})},{code:"DE",displayName:"Deutsch",icon:(0,l.jsx)(_.Z,{height:24,width:36}),placeholderIcon:(0,l.jsx)(_.Z,{height:12,width:18}),placeholderIconInMobile:(0,l.jsx)(_.Z,{height:14.67,width:22})},{code:"ES",displayName:"Espa\xf1ol",icon:(0,l.jsx)(b.Z,{height:24,width:36}),placeholderIcon:(0,l.jsx)(b.Z,{height:12,width:18}),placeholderIconInMobile:(0,l.jsx)(b.Z,{height:14.67,width:22})},{code:"FR",displayName:"Fran\xe7ais",icon:(0,l.jsx)(j.Z,{height:24,width:36}),placeholderIcon:(0,l.jsx)(j.Z,{height:12,width:18}),placeholderIconInMobile:(0,l.jsx)(j.Z,{height:14.67,width:22})},{code:"IT",displayName:"Italiano",icon:(0,l.jsx)(f.Z,{height:24,width:36}),placeholderIcon:(0,l.jsx)(f.Z,{height:12,width:18}),placeholderIconInMobile:(0,l.jsx)(f.Z,{height:14.67,width:22})},{code:"SW",displayName:"Kiswahili",icon:(0,l.jsx)(w.Z,{height:24,width:36}),placeholderIcon:(0,l.jsx)(w.Z,{height:12,width:18}),placeholderIconInMobile:(0,l.jsx)(w.Z,{height:14.67,width:22})},{code:"KM",displayName:"ខ្មែរ",icon:(0,l.jsx)(y.Z,{height:24,width:36}),placeholderIcon:(0,l.jsx)(y.Z,{height:12,width:18}),placeholderIconInMobile:(0,l.jsx)(y.Z,{height:14.67,width:22})},{code:"KO",displayName:"한국어",icon:(0,l.jsx)(C.Z,{height:24,width:36}),placeholderIcon:(0,l.jsx)(C.Z,{height:12,width:18}),placeholderIconInMobile:(0,l.jsx)(C.Z,{height:14.67,width:22})},{code:"PL",displayName:"Polish",icon:(0,l.jsx)(I.Z,{height:24,width:36}),placeholderIcon:(0,l.jsx)(I.Z,{height:12,width:18}),placeholderIconInMobile:(0,l.jsx)(I.Z,{height:14.67,width:22})},{code:"PT",displayName:"Portugu\xeas",icon:(0,l.jsx)(N.Z,{height:24,width:36}),placeholderIcon:(0,l.jsx)(N.Z,{height:12,width:18}),placeholderIconInMobile:(0,l.jsx)(N.Z,{height:14.67,width:22})},{code:"RU",displayName:"Русский",icon:(0,l.jsx)(Z.Z,{height:24,width:36}),placeholderIcon:(0,l.jsx)(Z.Z,{height:12,width:18}),placeholderIconInMobile:(0,l.jsx)(Z.Z,{height:14.67,width:22})},{code:"SI",displayName:"සිංහල",icon:(0,l.jsx)(L.Z,{height:24,width:36}),placeholderIcon:(0,l.jsx)(L.Z,{height:12,width:18}),placeholderIconInMobile:(0,l.jsx)(L.Z,{height:14.67,width:22})},{code:"TH",displayName:"ไทย",icon:(0,l.jsx)(k.Z,{height:24,width:36}),placeholderIcon:(0,l.jsx)(k.Z,{height:12,width:18}),placeholderIconInMobile:(0,l.jsx)(k.Z,{height:14.67,width:22})},{code:"TR",displayName:"T\xfcrk\xe7e",icon:(0,l.jsx)(z.Z,{height:24,width:36}),placeholderIcon:(0,l.jsx)(z.Z,{height:12,width:18}),placeholderIconInMobile:(0,l.jsx)(z.Z,{height:14.67,width:22})},{code:"UZ",displayName:"O'zbek",icon:(0,l.jsx)(S.Z,{height:24,width:36}),placeholderIcon:(0,l.jsx)(S.Z,{height:12,width:18}),placeholderIconInMobile:(0,l.jsx)(S.Z,{height:14.67,width:22})},{code:"VI",displayName:"Tiếng Việt",icon:(0,l.jsx)(M.Z,{height:24,width:36}),placeholderIcon:(0,l.jsx)(M.Z,{height:12,width:18}),placeholderIconInMobile:(0,l.jsx)(M.Z,{height:14.67,width:22})},{code:"ZH_CN",displayName:"简体中文",icon:(0,l.jsx)(E.Z,{height:24,width:36}),placeholderIcon:(0,l.jsx)(E.Z,{height:12,width:18}),placeholderIconInMobile:(0,l.jsx)(E.Z,{height:14.67,width:22})},{code:"ZH_TW",displayName:"繁體中文",icon:(0,l.jsx)(F.Z,{height:24,width:36}),placeholderIcon:(0,l.jsx)(F.Z,{height:12,width:18}),placeholderIconInMobile:(0,l.jsx)(F.Z,{height:14.67,width:22})}];var A=n("48059"),R=n("44412"),O=n("96877"),D=n("83257"),P=n("53261"),V=n("21456"),H=n("64915");let U=(0,O.Pi)(()=>{let{is_dark_mode_on:e,toggleTheme:t}=(0,D.Z)(),{localize:n}=(0,A.T_)();return(0,l.jsx)(H.u,{as:"button",className:"app-footer__icon",tooltipContent:n("Change theme"),onClick:t,children:e?(0,l.jsx)(V.Z,{iconSize:"xs"}):(0,l.jsx)(P.Z,{iconSize:"xs"})})});var q=n("79655"),B=n("66175"),X=n("45452"),$=n("12838");let W=()=>{let e=$.fV.getValue($.sE.configServerURL);return e?(0,l.jsxs)(X.Z,{className:"app-footer__endpoint",color:"red",size:"s",children:["The server"," ",(0,l.jsx)(q.rU,{className:"app-footer__endpoint-text",to:B.xOw.endpoint,children:"endpoint"})," ",`is: ${e}`]}):null},G={exit:["exitFullscreen","webkitExitFullscreen","mozCancelFullScreen","msExitFullscreen"],request:["requestFullscreen","webkitRequestFullscreen","mozRequestFullScreen","msRequestFullscreen"],screenChange:["fullscreenchange","webkitfullscreenchange","mozfullscreenchange","MSFullscreenChange"],screenElement:["fullscreenElement","webkitFullscreenElement","mozFullScreenElement","msFullscreenElement"]},K=()=>{let[e,t]=(0,i.useState)(!1),{exit:n,request:l,screenChange:o,screenElement:a}=G,s=(0,i.useCallback)(()=>t(a.some(e=>document[e])),[a]);return(0,i.useEffect)(()=>(o.forEach(e=>{document.addEventListener(e,s,!1)}),()=>{o.forEach(e=>{document.removeEventListener(e,s,!1)})}),[s,o]),{toggleFullScreenMode:i=>{null==i||i.stopPropagation();let o=n.find(e=>document[e]),a=l.find(e=>document.documentElement[e]);e&&o?document[o]():a?document.documentElement[a]():t(!1)}}};var J=n("69914");let Q=()=>{let{toggleFullScreenMode:e}=K(),{localize:t}=(0,A.T_)();return(0,l.jsx)(H.u,{as:"button",className:"app-footer__icon",onClick:e,tooltipContent:t("Full screen"),children:(0,l.jsx)(J.Z,{iconSize:"xs"})})},Y=e=>{let{openLanguageSettingModal:t}=e,{currentLang:n,localize:o}=(0,A.T_)(),a=(0,i.useMemo)(()=>{var e;return null===(e=T.find(e=>{let{code:t}=e;return t==n}))||void 0===e?void 0:e.placeholderIcon},[n]);return(0,l.jsxs)(H.u,{as:"button",className:"app-footer__language",onClick:t,tooltipContent:o("Language"),children:[a,(0,l.jsx)(X.Z,{size:"xs",weight:"bold",children:n})]})},ee=()=>"undefined"==typeof navigator||"boolean"!=typeof navigator.onLine||navigator.onLine,et=()=>{let[e,t]=(0,i.useState)(ee()),n=()=>t(!0),l=()=>t(!1);return(0,i.useEffect)(()=>(window.addEventListener("online",n),window.addEventListener("offline",l),()=>{window.removeEventListener("online",n),window.removeEventListener("offline",l)}),[]),e},en=()=>{let[e,t]=(0,i.useState)("online"),n=et();return(0,i.useEffect)(()=>{n?t("online"):t("offline")},[n]),e},el=()=>({blinking:{className:"app-footer__network-status-online app-footer__network-status-blinking",tooltip:(0,A.NC)("Connecting to server")},offline:{className:"app-footer__network-status-offline",tooltip:"Offline"},online:{className:"app-footer__network-status-online",tooltip:"Online"}}),ei=()=>{let e=en(),{className:t,tooltip:n}=(0,i.useMemo)(()=>el()[e],[e]);return(0,l.jsx)(H.u,{as:"div",className:"app-footer__icon","data-testid":"dt_network_status",tooltipContent:(0,A.NC)("Network status: {{status}}",{status:n}),children:(0,l.jsx)("div",{className:(0,o.Z)("app-footer__network-status",t),"data-testid":"dt_circle"})})};var eo=n("30381"),ea=n.n(eo),es=n("83274"),er=n("27179"),ec=n("83606");let ed=(0,O.Pi)(()=>{let{isDesktop:e}=(0,d.F)(),{common:t}=(0,es.oR)()??{common:{server_time:ea()()}};return(0,l.jsx)(H.u,{as:"div",className:"app-footer__icon","data-testid":"dt_server_time",tooltipContent:t.server_time.format(er.kT),children:(0,l.jsx)(ec.x,{size:e?"xs":"sm",children:t.server_time.format(er.Yp)})})}),eu=()=>{let{currentLang:e="EN",localize:t,switchLanguage:n}=(0,A.T_)(),{hideModal:i,isModalOpenFor:o,showModal:a}=m();return(0,l.jsxs)("footer",{className:"app-footer",children:[(0,l.jsx)(Q,{}),(0,l.jsx)(Y,{openLanguageSettingModal:()=>a("DesktopLanguagesModal")}),(0,l.jsx)("div",{className:"app-footer__vertical-line"}),(0,l.jsx)(U,{}),(0,l.jsx)("div",{className:"app-footer__vertical-line"}),(0,l.jsx)(ed,{}),(0,l.jsx)("div",{className:"app-footer__vertical-line"}),(0,l.jsx)(ei,{}),(0,l.jsx)(W,{}),o("DesktopLanguagesModal")&&(0,l.jsx)(R.u,{headerTitle:t("Select Language"),isModalOpen:!0,languages:T,onClose:i,onLanguageSwitch:e=>{n(e),i(),window.location.replace(g()),window.location.reload()},selectedLanguage:e})]})};var eh=n("45221");let em={aud:(0,i.lazy)(()=>n.e("609").then(n.bind(n,19673)).then(e=>({default:e.CurrencyAudIcon}))),bch:(0,i.lazy)(()=>n.e("609").then(n.bind(n,19673)).then(e=>({default:e.CurrencyBchIcon}))),btc:(0,i.lazy)(()=>n.e("609").then(n.bind(n,19673)).then(e=>({default:e.CurrencyBtcIcon}))),busd:(0,i.lazy)(()=>n.e("609").then(n.bind(n,19673)).then(e=>({default:e.CurrencyBusdIcon}))),dai:(0,i.lazy)(()=>n.e("609").then(n.bind(n,19673)).then(e=>({default:e.CurrencyDaiIcon}))),eth:(0,i.lazy)(()=>n.e("609").then(n.bind(n,19673)).then(e=>({default:e.CurrencyEthIcon}))),eur:(0,i.lazy)(()=>n.e("609").then(n.bind(n,19673)).then(e=>({default:e.CurrencyEurIcon}))),"eur-check":(0,i.lazy)(()=>n.e("609").then(n.bind(n,19673)).then(e=>({default:e.CurrencyEurIcon}))),eurs:(0,i.lazy)(()=>n.e("609").then(n.bind(n,19673)).then(e=>({default:e.CurrencyEursIcon}))),eusdt:(0,i.lazy)(()=>n.e("609").then(n.bind(n,19673)).then(e=>({default:e.CurrencyUsdtIcon}))),gbp:(0,i.lazy)(()=>n.e("609").then(n.bind(n,19673)).then(e=>({default:e.CurrencyGbpIcon}))),idk:(0,i.lazy)(()=>n.e("609").then(n.bind(n,19673)).then(e=>({default:e.CurrencyIdkIcon}))),ltc:(0,i.lazy)(()=>n.e("609").then(n.bind(n,19673)).then(e=>({default:e.CurrencyLtcIcon}))),pax:(0,i.lazy)(()=>n.e("609").then(n.bind(n,19673)).then(e=>({default:e.CurrencyPaxIcon}))),tusd:(0,i.lazy)(()=>n.e("609").then(n.bind(n,19673)).then(e=>({default:e.CurrencyTusdIcon}))),tusdt:(0,i.lazy)(()=>n.e("609").then(n.bind(n,19673)).then(e=>({default:e.CurrencyUsdtIcon}))),unknown:(0,i.lazy)(()=>n.e("609").then(n.bind(n,19673)).then(e=>({default:e.CurrencyPlaceholderIcon}))),usd:(0,i.lazy)(()=>n.e("609").then(n.bind(n,19673)).then(e=>({default:e.CurrencyUsdIcon}))),usdc:(0,i.lazy)(()=>n.e("609").then(n.bind(n,19673)).then(e=>({default:e.CurrencyUsdcIcon}))),usdk:(0,i.lazy)(()=>n.e("609").then(n.bind(n,19673)).then(e=>({default:e.CurrencyUsdkIcon}))),ust:(0,i.lazy)(()=>n.e("609").then(n.bind(n,19673)).then(e=>({default:e.CurrencyUsdtIcon}))),virtual:(0,i.lazy)(()=>n.e("609").then(n.bind(n,19673)).then(e=>({default:e.CurrencyDemoIcon}))),xrp:(0,i.lazy)(()=>n.e("609").then(n.bind(n,19673)).then(e=>({default:e.CurrencyXrpIcon}))),algo:(0,i.lazy)(()=>n.e("609").then(n.bind(n,19673)).then(e=>({default:e.CurrencyAlgoIcon}))),avax:(0,i.lazy)(()=>n.e("609").then(n.bind(n,19673)).then(e=>({default:e.CurrencyAvaxIcon}))),bat:(0,i.lazy)(()=>n.e("609").then(n.bind(n,19673)).then(e=>({default:e.CurrencyBatIcon}))),bnb:(0,i.lazy)(()=>n.e("609").then(n.bind(n,19673)).then(e=>({default:e.CurrencyBnbIcon}))),dash:(0,i.lazy)(()=>n.e("609").then(n.bind(n,19673)).then(e=>({default:e.CurrencyDashIcon}))),doge:(0,i.lazy)(()=>n.e("609").then(n.bind(n,19673)).then(e=>({default:e.CurrencyDogeIcon}))),dot:(0,i.lazy)(()=>n.e("609").then(n.bind(n,19673)).then(e=>({default:e.CurrencyDotIcon}))),eos:(0,i.lazy)(()=>n.e("609").then(n.bind(n,19673)).then(e=>({default:e.CurrencyEosIcon}))),etc:(0,i.lazy)(()=>n.e("609").then(n.bind(n,19673)).then(e=>({default:e.CurrencyEtcIcon}))),fil:(0,i.lazy)(()=>n.e("609").then(n.bind(n,19673)).then(e=>({default:e.CurrencyFilIcon}))),iota:(0,i.lazy)(()=>n.e("609").then(n.bind(n,19673)).then(e=>({default:e.CurrencyIotaIcon}))),link:(0,i.lazy)(()=>n.e("609").then(n.bind(n,19673)).then(e=>({default:e.CurrencyLinkIcon}))),matic:(0,i.lazy)(()=>n.e("609").then(n.bind(n,19673)).then(e=>({default:e.CurrencyMaticIcon}))),mkr:(0,i.lazy)(()=>n.e("609").then(n.bind(n,19673)).then(e=>({default:e.CurrencyMkrIcon}))),mcd:(0,i.lazy)(()=>n.e("609").then(n.bind(n,19673)).then(e=>({default:e.CurrencyMultiCollateralDaiIcon}))),neo:(0,i.lazy)(()=>n.e("609").then(n.bind(n,19673)).then(e=>({default:e.CurrencyNeoIcon}))),none:(0,i.lazy)(()=>n.e("609").then(n.bind(n,19673)).then(e=>({default:e.CurrencyNoneIcon}))),omg:(0,i.lazy)(()=>n.e("609").then(n.bind(n,19673)).then(e=>({default:e.CurrencyOmgIcon}))),p2p:(0,i.lazy)(()=>n.e("609").then(n.bind(n,19673)).then(e=>({default:e.CurrencyP2PIcon}))),scd:(0,i.lazy)(()=>n.e("609").then(n.bind(n,19673)).then(e=>({default:e.CurrencySingleCollateralDaiIcon}))),sol:(0,i.lazy)(()=>n.e("609").then(n.bind(n,19673)).then(e=>({default:e.CurrencySolIcon}))),terra:(0,i.lazy)(()=>n.e("609").then(n.bind(n,19673)).then(e=>({default:e.CurrencyTerraIcon}))),trx:(0,i.lazy)(()=>n.e("609").then(n.bind(n,19673)).then(e=>({default:e.CurrencyTrxIcon}))),uni:(0,i.lazy)(()=>n.e("609").then(n.bind(n,19673)).then(e=>({default:e.CurrencyUniIcon}))),xlm:(0,i.lazy)(()=>n.e("609").then(n.bind(n,19673)).then(e=>({default:e.CurrencyXlmIcon}))),xmr:(0,i.lazy)(()=>n.e("609").then(n.bind(n,19673)).then(e=>({default:e.CurrencyXmrIcon}))),xtz:(0,i.lazy)(()=>n.e("609").then(n.bind(n,19673)).then(e=>({default:e.CurrencyXtzIcon}))),zec:(0,i.lazy)(()=>n.e("609").then(n.bind(n,19673)).then(e=>({default:e.CurrencyZecIcon})))},eg=e=>{let{currency:t,isVirtual:n}=e,o=n?em.virtual:em[null==t?void 0:t.toLowerCase()]||em.unknown;return(0,l.jsx)(i.Suspense,{fallback:null,children:(0,l.jsx)(o,{iconSize:"sm"})})};var ex=n("79649");let ep=e=>{var t;let{allBalanceData:n}=e,{accountList:o,activeLoginid:a}=(0,ex.T)(),s=(0,i.useMemo)(()=>null==o?void 0:o.find(e=>e.loginid===a),[a,o]),r=null==n?void 0:null===(t=n.accounts)||void 0===t?void 0:t[(null==s?void 0:s.loginid)??""];return{data:(0,i.useMemo)(()=>{var e,t;return s?{...s,balance:(0,B.oC5)(null==r?void 0:null===(e=r.balance)||void 0===e?void 0:e.toFixed((0,B.i4S)(r.currency)))??"0",currencyLabel:(null==s?void 0:s.is_virtual)?(0,A.NC)("Demo"):null==s?void 0:s.currency,icon:(0,l.jsx)(eg,{currency:null==s?void 0:null===(t=s.currency)||void 0===t?void 0:t.toLowerCase(),isVirtual:!!(null==s?void 0:s.is_virtual)}),isVirtual:!!(null==s?void 0:s.is_virtual),isActive:(null==s?void 0:s.loginid)===a}:void 0},[s,a,n])}};var ev=n("77898"),e_=n("16857"),eb=n("70361");let ej=()=>(0,l.jsxs)("div",{className:"d-apollo-logo",children:[(0,l.jsxs)("div",{className:"logo-holder",children:[(0,l.jsx)("img",{src:"/dollar_logo.jpg",alt:"custom Logo",className:"d-apollo-logo__image"}),(0,l.jsx)(X.Z,{color:"less-prominent",lineHeight:"xs",size:"xs",weight:"bold",align:"center",className:"dc-contract-card-message",children:"Oruchotrader"})]}),(0,l.jsx)("a",{href:"https://t.me/oruchotradersite",target:"_blank",rel:"noopener noreferrer",className:"d-apollo-logo__icon",children:(0,l.jsx)(eb.Ww5,{})})]}),ef=()=>{let{isDesktop:e}=(0,d.F)();return e?(0,l.jsx)(ej,{}):null};var ew=n("24561");let ey=e=>{let{isMobile:t}=e;return(0,l.jsx)(l.Fragment,{children:t?(0,l.jsxs)(l.Fragment,{children:[(0,l.jsx)("circle",{cx:"14",cy:"22",r:"13"}),(0,l.jsx)("rect",{height:"7",rx:"4",ry:"4",width:"76",x:"35",y:"19"}),(0,l.jsx)("rect",{height:"32",rx:"4",ry:"4",width:"82",x:"120",y:"6"})]}):(0,l.jsxs)(l.Fragment,{children:[(0,l.jsx)("circle",{cx:"14",cy:"22",r:"12"}),(0,l.jsx)("circle",{cx:"58",cy:"22",r:"12"}),(0,l.jsx)("rect",{height:"7",rx:"4",ry:"4",width:"76",x:"150",y:"20"}),(0,l.jsx)("circle",{cx:"118",cy:"24",r:"13"}),(0,l.jsx)("rect",{height:"30",rx:"4",ry:"4",width:"1",x:"87",y:"8"}),(0,l.jsx)("rect",{height:"32",rx:"4",ry:"4",width:"82",x:"250",y:"8"})]})})},eC=e=>{let{isMobile:t,speed:n}=e;return(0,l.jsx)(ew.ZP,{"data-testid":"dt_accounts_info_loader",height:t?42:46,speed:n,width:t?216:350,backgroundColor:"var(--general-section-1)",foregroundColor:"var(--general-hover)",children:(0,l.jsx)(ey,{isMobile:t})})};var eI=n("30394"),eN=n("88199"),eZ=n("42457"),eL=n("33281"),ek=n("47342"),ez=n("63387"),eS=n.n(ez);let eM=e=>{let{width:t,height:n}=e;return(0,l.jsx)("div",{className:"skeleton",style:{width:t,height:n}})};var eE=n("44884"),eF=n("37410"),eT=n("37528");let eA={currency:" ",currencyLabel:"Options & Multipliers",is_virtual:1,loginid:"",is_disabled:!1,balance:"",icon:(0,l.jsx)(eF.Z,{width:24,height:24}),isActive:!1,isVirtual:!0},eR=e=>Number(e.replace(/,/g,"")),eO=()=>(0,l.jsx)(eT.i,{color:"var(--general-section-2)",height:"4px"}),eD=e=>{let{oAuthLogout:t,loginid:n,is_logging_out:i}=e,o=(null==n?void 0:n.includes("CR"))||(null==n?void 0:n.includes("MF"));return(0,l.jsxs)("div",{className:"",children:[(0,l.jsx)(ek.T.TradersHubLink,{href:B.xOw.traders_hub,children:(0,A.NC)("Looking for CFD accounts? Go to Trader's Hub")}),(0,l.jsx)(eO,{}),(0,l.jsxs)("div",{className:eS()("account-switcher-footer__actions",{"account-switcher-footer__actions--hide-manage-button":!o}),children:[o&&(0,l.jsx)(eh.Z,{id:"manage-button",className:"manage-button",onClick:()=>location.replace("https://app.deriv.com"),children:(0,l.jsx)(A.Xx,{i18n_default_text:"Manage accounts"})}),(0,l.jsx)(ek.T.Footer,{children:i?(0,l.jsx)("div",{className:"deriv-account-switcher__logout--loader",children:(0,l.jsx)(eM,{width:"120px",height:"12px"})}):(0,l.jsxs)("div",{id:"dt_logout_button",className:"deriv-account-switcher__logout",onClick:t,children:[(0,l.jsx)(X.Z,{color:"prominent",size:"xs",align:"left",className:"deriv-account-switcher__logout-text",children:(0,A.NC)("Logout")}),(0,l.jsx)(eE.Z,{iconSize:"xs",fill:"var(--text-general)",className:"icon-general-fill-path"})]})})]})]})},eP=e=>{let{tabs_labels:t,modifiedVRTCRAccountList:n,switchAccount:i,isVirtual:a,activeLoginId:s,oAuthLogout:r,is_logging_out:c}=e;return(0,l.jsxs)(l.Fragment,{children:[(0,l.jsx)(ek.T.AccountsPanel,{isOpen:!0,title:(0,A.NC)("Deriv account"),className:"account-switcher-panel",children:n&&n.map(e=>(0,l.jsx)("span",{className:(0,o.Z)("account-switcher__item",{"account-switcher__item--disabled":e.is_disabled}),children:(0,l.jsx)(ek.T.AccountsItem,{account:e,onSelectAccount:()=>{!e.is_disabled&&i(e.loginid)},onResetBalance:a&&s===e.loginid&&1e4!==eR(e.balance)?()=>{var e;null===eN.api_base||void 0===eN.api_base||null===(e=eN.api_base.api)||void 0===e||e.send({topup_virtual:1})}:void 0})},e.loginid))},t.demo.toLowerCase()),(0,l.jsx)(eO,{}),(0,l.jsx)(eD,{loginid:s,oAuthLogout:r,is_logging_out:c})]})},eV=e=>{let{isVirtual:t,tabs_labels:n,modifiedMFAccountList:i,switchAccount:a,is_low_risk_country:s}=e,r=(null==i?void 0:i.length)!==0&&s?(0,A.NC)("Eu Deriv accounts"):(0,A.NC)("Deriv accounts");return(0,l.jsx)(ek.T.AccountsPanel,{isOpen:!0,title:r,className:"account-switcher-panel",children:i.map(e=>(e.currencyLabel=(0,A.NC)("Multipliers"),(0,l.jsx)("span",{className:(0,o.Z)("account-switcher__item",{"account-switcher__item--disabled":e.is_disabled}),children:(0,l.jsx)(ek.T.AccountsItem,{account:e,onSelectAccount:()=>{!e.is_disabled&&a(e.loginid)}})},e.loginid)))},t?n.real.toLowerCase():n.demo.toLowerCase())};var eH=n("11527");let eU=e=>{var t,n;let{isVirtual:i,tabs_labels:o,is_low_risk_country:a}=e;return a?(0,l.jsx)(ek.T.AccountsPanel,{isOpen:!0,title:(0,A.NC)("Non-Eu Deriv account"),className:"account-switcher-panel",children:(0,l.jsxs)("div",{className:"account-switcher-panel__no-eu-accounts",children:[(0,l.jsx)(ek.T.AccountsItem,{account:eA,onSelectAccount:()=>{}}),(0,l.jsx)(eO,{}),(0,l.jsx)(eH.z,{id:"add-button",className:"add-button",onClick:()=>location.replace(B.xOw.traders_hub),children:(0,l.jsx)(A.Xx,{i18n_default_text:"Add"})})]})},i?null==o?void 0:null===(n=o.real)||void 0===n?void 0:n.toLowerCase():null==o?void 0:null===(t=o.demo)||void 0===t?void 0:t.toLowerCase()):null},eq=e=>{let{isVirtual:t,tabs_labels:n,modifiedCRAccountList:i,modifiedMFAccountList:a,is_low_risk_country:s,switchAccount:r}=e;if(!s&&i&&(null==i?void 0:i.length)===0)return null;let c=(null==a?void 0:a.length)===0?(0,A.NC)("Deriv accounts"):(0,A.NC)("Non-Eu Deriv account");return(0,l.jsx)(l.Fragment,{children:(0,l.jsx)(ek.T.AccountsPanel,{isOpen:!0,title:c,className:"account-switcher-panel",style:{maxHeight:"220px"},children:i.map(e=>(0,l.jsx)("span",{className:(0,o.Z)("account-switcher__item",{"account-switcher__item--disabled":e.is_disabled}),children:(0,l.jsx)(ek.T.AccountsItem,{account:e,onSelectAccount:()=>{!e.is_disabled&&r(e.loginid)}})},e.loginid))},t?null==n?void 0:n.real.toLowerCase():n.demo.toLowerCase())})},eB=e=>{let{modifiedCRAccountList:t,modifiedMFAccountList:n,switchAccount:i,isVirtual:o,tabs_labels:a,is_low_risk_country:s,oAuthLogout:r,loginid:c,is_logging_out:d}=e,u=t&&(null==t?void 0:t.length)>0,h=n&&(null==n?void 0:n.length)>0;return(0,l.jsxs)(l.Fragment,{children:[u?(0,l.jsxs)(l.Fragment,{children:[(0,l.jsx)(eq,{modifiedCRAccountList:t,modifiedMFAccountList:n,switchAccount:i,isVirtual:o,tabs_labels:a,is_low_risk_country:s}),(0,l.jsx)(eO,{})]}):(0,l.jsxs)(l.Fragment,{children:[(0,l.jsx)(eU,{is_low_risk_country:s,isVirtual:o,tabs_labels:a}),(0,l.jsx)(eO,{})]}),h&&(0,l.jsxs)(l.Fragment,{children:[(0,l.jsx)(eV,{modifiedMFAccountList:n,switchAccount:i,isVirtual:o,tabs_labels:a,is_low_risk_country:s}),(0,l.jsx)(eO,{})]}),(0,l.jsx)(eD,{oAuthLogout:r,loginid:c,is_logging_out:d})]})};var eX=n("17481");let e$=(0,i.lazy)(()=>n.e("932").then(n.bind(n,67568))),eW={demo:(0,A.NC)("Demo"),real:(0,A.NC)("Real")},eG=e=>{var t;let{isVirtual:n,modifiedCRAccountList:o,modifiedMFAccountList:a,modifiedVRTCRAccountList:s,switchAccount:c,activeLoginId:d,client:u}=e,{oAuthLogout:h}=(0,r.q)({handleLogout:async()=>u.logout(),client:u}),m=(0,eX.Gz)().includes((null===(t=u.account_settings)||void 0===t?void 0:t.country_code)??""),g=!!n;return((0,i.useEffect)(()=>{var e,t;let l=null===(e=document.getElementsByClassName("account-switcher-panel"))||void 0===e?void 0:e[0];!n&&l&&(l.style.maxHeight="70vh",null===(t=(0,eZ._)(".deriv-accordion__content",l))||void 0===t||t.then(e=>{e&&(e.style.maxHeight="70vh")}))},[n]),g)?(0,l.jsx)(l.Fragment,{children:(0,l.jsx)(eP,{modifiedVRTCRAccountList:s,switchAccount:c,activeLoginId:d,isVirtual:g,tabs_labels:eW,oAuthLogout:h,is_logging_out:u.is_logging_out})}):(0,l.jsx)(eB,{modifiedCRAccountList:o,modifiedMFAccountList:a,switchAccount:c,isVirtual:g,tabs_labels:eW,is_low_risk_country:m,oAuthLogout:h,loginid:d,is_logging_out:u.is_logging_out})},eK=(0,O.Pi)(e=>{var t,n;let{activeAccount:o}=e,{isDesktop:a}=(0,d.F)(),{accountList:s}=(0,ex.T)(),{ui:r,run_panel:c,client:u}=(0,es.oR)(),{accounts:h}=u,{toggleAccountsDialog:m,is_accounts_switcher_on:g,account_switcher_disabled_message:x}=r,{is_stop_button_visible:p}=c,v=Object.keys(h).some(e=>"wallet"===h[e].account_category),_=(0,i.useMemo)(()=>null==s?void 0:s.map(e=>{var t,n,i,a,s,r,c,d;return{...e,balance:(0,B.oC5)((null===(a=u.all_accounts_balance)||void 0===a?void 0:null===(i=a.accounts)||void 0===i?void 0:null===(n=i[null==e?void 0:e.loginid])||void 0===n?void 0:null===(t=n.balance)||void 0===t?void 0:t.toFixed((0,B.i4S)(e.currency)))??"0"),currencyLabel:(null==e?void 0:e.is_virtual)?eW.demo:(null===(c=u.website_status)||void 0===c?void 0:null===(r=c.currencies_config)||void 0===r?void 0:null===(s=r[null==e?void 0:e.currency])||void 0===s?void 0:s.name)??(null==e?void 0:e.currency),icon:(0,l.jsx)(eg,{currency:null==e?void 0:null===(d=e.currency)||void 0===d?void 0:d.toLowerCase(),isVirtual:!!(null==e?void 0:e.is_virtual)}),isVirtual:!!(null==e?void 0:e.is_virtual),isActive:(null==e?void 0:e.loginid)===(null==o?void 0:o.loginid)}}),[s,null===(t=u.all_accounts_balance)||void 0===t?void 0:t.accounts,null===(n=u.website_status)||void 0===n?void 0:n.currencies_config,null==o?void 0:o.loginid]),b=(0,i.useMemo)(()=>(null==_?void 0:_.filter(e=>{var t;return null==e?void 0:null===(t=e.loginid)||void 0===t?void 0:t.includes("CR")}))??[],[_]),j=(0,i.useMemo)(()=>(null==_?void 0:_.filter(e=>{var t;return null==e?void 0:null===(t=e.loginid)||void 0===t?void 0:t.includes("MF")}))??[],[_]),f=(0,i.useMemo)(()=>(null==_?void 0:_.filter(e=>{var t;return null==e?void 0:null===(t=e.loginid)||void 0===t?void 0:t.includes("VRT")}))??[],[_]),w=async e=>{if(e.toString()===(null==o?void 0:o.loginid))return;let t=JSON.parse(localStorage.getItem("accountsList")??"{}")[e];if(!t)return;localStorage.setItem("authToken",t),localStorage.setItem("active_loginid",e.toString()),await (null===eN.api_base||void 0===eN.api_base?void 0:eN.api_base.init(!0));let n=new URLSearchParams(window.location.search),l=_.find(t=>t.loginid===e.toString());if(!l)return;let i=l.is_virtual?"demo":l.currency;n.set("account",i),window.history.pushState({},"",`${window.location.pathname}?${n.toString()}`)};return o&&(v?(0,l.jsx)(i.Suspense,{fallback:(0,l.jsx)(eL.a,{}),children:(0,l.jsx)(e$,{is_dialog_on:g,toggleDialog:m})}):(0,l.jsx)(eI.Z,{className:"run-panel__info",classNameBubble:"run-panel__info--bubble",alignment:"bottom",message:x,zIndex:"5",children:(0,l.jsxs)(ek.T,{activeAccount:o,isDisabled:p,tabsLabels:eW,modalContentStyle:{content:{top:a?"30%":"50%",borderRadius:"10px"}},children:[(0,l.jsx)(ek.T.Tab,{title:eW.real,children:(0,l.jsx)(eG,{modifiedCRAccountList:b,modifiedMFAccountList:j,switchAccount:w,activeLoginId:null==o?void 0:o.loginid,client:u})}),(0,l.jsx)(ek.T.Tab,{title:eW.demo,children:(0,l.jsx)(eG,{modifiedVRTCRAccountList:f,switchAccount:w,isVirtual:!0,activeLoginId:null==o?void 0:o.loginid,client:u})})]})}))});var eJ=n("39523"),eQ=n("38051"),eY=n("39590"),e0=n("14393"),e1=n("34215"),e6=n("44741");e0.Z,(0,A.NC)("A whole new trading experience on a powerful yet easy to use platform."),B.xOw.trade,e0.Z,e1.Z,(0,A.NC)("Automated trading at your fingertips. No coding needed."),B.xOw.bot,e1.Z,e6.Z,(0,A.NC)("Trade the world’s markets with our popular user-friendly platform."),B.xOw.smarttrader,e6.Z;let e2={as:"a",href:B.xOw.traders_hub,icon:(0,l.jsx)(eQ.Z,{iconSize:"xs"}),label:"Trader's Hub"},e9=[{as:"a",href:B.xOw.reports,icon:(0,l.jsx)(eY.Z,{iconSize:"xs"}),label:(0,A.NC)("Reports")}],e3=(0,O.Pi)(()=>{let{localize:e}=(0,A.T_)(),{isDesktop:t}=(0,d.F)(),n=(0,es.oR)();if(!n)return null;let{is_logged_in:i}=n.client;return(0,l.jsx)(l.Fragment,{children:i&&(t?e9.map(t=>{let{as:n,href:i,icon:o,label:a}=t;return(0,l.jsx)(eJ.s,{as:n,className:"app-header__menu",href:i,leftComponent:o,children:(0,l.jsx)(ec.x,{children:e(a)})},a)}):(0,l.jsx)(eJ.s,{as:e9["1"].as,className:"flex gap-2 p-5",href:e9["1"].href,leftComponent:e9["1"].icon,children:(0,l.jsx)(ec.x,{children:e(e9["1"].label)})},e9["1"].label))})});e3.TradershubLink=()=>(0,l.jsx)(eJ.s,{as:"a",className:"app-header__menu",href:e2.href,leftComponent:e2.icon,children:(0,l.jsx)(ec.x,{children:e2.label})},e2.label);var e7=n("17934"),e4=n("41301"),e8=n("68782");let e5=e=>{let{buttonText:t,onClick:n}=e,{isDesktop:i}=(0,d.F)();return(0,l.jsxs)("button",{className:"flex items-center w-full pt-8 p-[3.2rem]",onClick:n,children:[(0,l.jsx)(e8.Z,{iconSize:"xs",fill:"var(--text-general)"}),(0,l.jsx)(ec.x,{className:"ml-[1.6rem]",size:i?"md":"lg",weight:"bold",children:t})]})};var te=n("68534"),tt=n("93217");let tn=e=>{let{localize:t}=(0,A.T_)(),{is_dark_mode_on:n,toggleTheme:i}=(0,D.Z)(),{oAuthLogout:o}=(0,r.q)({handleLogout:async()=>null==e?void 0:e.logout(),client:e});return{config:[[{as:"button",label:t("Dark theme"),LeftComponent:te.Z,RightComponent:(0,l.jsx)(tt.Z,{value:n,onChange:i})}],(null==e?void 0:e.is_logged_in)?[{as:"button",label:t("Log out"),LeftComponent:eE.Z,onClick:o,removeBorderBottom:!0}]:[]]}},tl=(0,O.Pi)(()=>{let{isDesktop:e}=(0,d.F)(),{client:t}=(0,es.oR)(),n=e?"sm":"md",{config:i}=tn(t);return(0,l.jsx)("div",{className:"mobile-menu__content",children:(0,l.jsx)("div",{className:"mobile-menu__content__items",children:i.map((e,t)=>{let i=e.find(e=>{let{removeBorderBottom:t}=e;return t});return(0,l.jsx)("div",{className:(0,o.Z)("mobile-menu__content__items--padding",{"mobile-menu__content__items--bottom-border":!i}),"data-testid":"dt_menu_item",children:e.map(e=>{let{LeftComponent:t,RightComponent:i,as:a,href:s,label:r,onClick:c,target:d}=e,u="Oruchotrader.com"===r;return"a"===a?(0,l.jsx)(eJ.s,{as:"a",className:(0,o.Z)("mobile-menu__content__items__item",{"mobile-menu__content__items__icons":!u}),disableHover:!0,href:s,leftComponent:(0,l.jsx)(t,{className:"mobile-menu__content__items--right-margin",height:16,width:16}),target:d,children:(0,l.jsx)(ec.x,{size:n,children:r})},r):(0,l.jsx)(eJ.s,{as:"button",className:(0,o.Z)("mobile-menu__content__items__item",{"mobile-menu__content__items__icons":!u}),disableHover:!0,leftComponent:(0,l.jsx)(t,{className:"mobile-menu__content__items--right-margin",iconSize:"xs"}),onClick:c,rightComponent:i,children:(0,l.jsx)(ec.x,{size:n,children:r})},r)})},t)})})})}),ti=e=>{let{hideLanguageSetting:t,openLanguageSetting:n}=e,{currentLang:o,localize:a}=(0,A.T_)(),{isDesktop:s}=(0,d.F)(),r=(0,i.useMemo)(()=>{var e;return null===(e=T.find(e=>{let{code:t}=e;return t===o}))||void 0===e?void 0:e.placeholderIconInMobile},[o]);return(0,l.jsxs)("div",{className:"mobile-menu__header",children:[(0,l.jsx)(ec.x,{size:s?"md":"lg",weight:"bold",children:a("Menu")}),!t&&(0,l.jsxs)("button",{className:"mobile-menu__header__language items-center",onClick:n,children:[r,(0,l.jsx)(ec.x,{className:"ml-[0.4rem]",size:s?"xs":"sm",weight:"bold",children:o})]})]})};var to=n("89816");let ta=e=>{let{onClick:t}=e;return(0,l.jsx)("button",{onClick:t,children:(0,l.jsx)(to.Z,{iconSize:"xs",fill:"var(--text-general)"})})};var ts=n("32767");let tr=()=>{let[e,t]=(0,i.useState)(!1),{currentLang:n="EN",localize:o,switchLanguage:a}=(0,A.T_)(),{hideModal:s,isModalOpenFor:r,showModal:c}=m(),{isDesktop:u}=(0,d.F)(),h=()=>t(!1),x=!!r("MobileLanguagesDrawer"),p=e=>{window.open(e,"_blank")},v=()=>{window.location.reload()};return u?null:(0,l.jsxs)("div",{className:"mobile-menu",children:[(0,l.jsxs)("div",{className:"mobile-menu__toggle",children:[(0,l.jsx)(ta,{onClick:()=>t(!0)}),(0,l.jsx)("div",{onClick:()=>p("https://t.me/oruchotradersite"),children:(0,l.jsx)(eb.Ww5,{size:20,style:{color:"#60b5ff"}})}),(0,l.jsx)("div",{onClick:()=>v(),children:(0,l.jsx)(ts.e8N,{size:20,style:{color:"#29dfc0"}})})]}),(0,l.jsxs)(e7.d,{isOpen:e,onCloseDrawer:h,width:"29.5rem",children:[(0,l.jsx)(e7.d.Header,{onCloseDrawer:h,children:(0,l.jsx)(ti,{hideLanguageSetting:x,openLanguageSetting:()=>c("MobileLanguagesDrawer")})}),(0,l.jsx)(e7.d.Content,{children:x?(0,l.jsxs)(l.Fragment,{children:[(0,l.jsx)("div",{className:"mobile-menu__back-btn",children:(0,l.jsx)(e5,{buttonText:o("Language"),onClick:s})}),(0,l.jsx)(e4.I,{isOpen:!0,languages:T,onClose:s,onLanguageSwitch:e=>{a(e),window.location.replace(g()),window.location.reload()},selectedLanguage:n,wrapperClassName:"mobile-menu__language-drawer"})]}):(0,l.jsx)(tl,{})}),(0,l.jsxs)(e7.d.Footer,{className:"mobile-menu__footer",children:[(0,l.jsx)(ed,{}),(0,l.jsx)(ei,{})]})]})]})},tc=(0,O.Pi)(()=>{let{isDesktop:e}=(0,d.F)(),{isAuthorizing:t,activeLoginid:n}=(0,ex.T)(),{client:i}=(0,es.oR)()??{},{data:a}=ep({allBalanceData:null==i?void 0:i.all_accounts_balance}),{isOAuth2Enabled:s}=(0,r.q)();return(0,l.jsxs)(ev.h,{className:(0,o.Z)("app-header",{"app-header--desktop":e,"app-header--mobile":!e}),children:[(0,l.jsxs)(e_.i,{variant:"left",children:[(0,l.jsx)(ef,{}),(0,l.jsx)(tr,{}),e&&(0,l.jsx)(e3,{})]}),(0,l.jsx)(e_.i,{variant:"right",children:t?(0,l.jsx)(eC,{isLoggedIn:!0,isMobile:!e,speed:3}):n?(0,l.jsx)(l.Fragment,{children:(0,l.jsx)(eK,{activeAccount:a})}):(0,l.jsxs)("div",{className:"auth-actions",children:[(0,l.jsx)(eh.Z,{tertiary:!0,onClick:async()=>{s?await (0,c.P6)({redirectCallbackUri:`${window.location.origin}/callback`}):window.location.replace((0,B.O2o)())},children:(0,l.jsx)(A.Xx,{i18n_default_text:"Log in"})}),(0,l.jsx)(eh.Z,{primary:!0,onClick:()=>{window.open(B.xOw.signup)},children:(0,l.jsx)(A.Xx,{i18n_default_text:"Sign up"})})]})})]})}),td=e=>{let{children:t}=e,n=localStorage.getItem("theme")??"light",{ui:o}=(0,es.oR)()??{ui:{setDevice:()=>{}}},{setDevice:a}=o,{isDesktop:s,isMobile:r,isTablet:c}=(0,d.F)();return(0,i.useEffect)(()=>{let e=document.querySelector("body");e&&("light"===n?(e.classList.remove("theme--dark"),e.classList.add("theme--light")):(e.classList.remove("theme--light"),e.classList.add("theme--dark")))},[n]),(0,i.useEffect)(()=>{r?a("mobile"):c?a("tablet"):a("desktop")},[s,r,c,a]),(0,l.jsx)("div",{className:"main-body",children:t})},tu=()=>{let{isDesktop:e}=(0,d.F)(),{isOAuth2Enabled:t}=(0,r.q)(),n="/callback"===window.location.pathname,u="true"===a.Z.get("logged_state"),h=window.location.pathname.includes("endpoint"),m=Object.keys(JSON.parse(localStorage.getItem("accountsList")??"{}")).length>0;return(0,i.useEffect)(()=>{u&&!m&&t&&!h&&!n&&(0,c.P6)({redirectCallbackUri:`${window.location.origin}/callback`})},[u,m,t,h,n]),(0,l.jsxs)("div",{className:(0,o.Z)("layout",{responsive:e}),children:[!n&&(0,l.jsx)(tc,{}),(0,l.jsx)(td,{children:(0,l.jsx)(s.j3,{})}),!n&&e&&(0,l.jsx)(eu,{})]})}},30394:function(e,t,n){n.d(t,{Z:()=>g});var l=n("85893"),i=n("67294"),o=n("63387"),a=n.n(o),s=n("82106"),r=n("86278"),c=n("14244"),d=n("26088"),u=n("92868"),h=n("2502"),m=n("45452");let g=e=>{let{alignment:t,children:n,className:o,classNameBubble:g,classNameTarget:x,classNameTargetIcon:p,counter:v,disable_message_icon:_,disable_target_icon:b,has_error:j,icon:f,id:w,is_open:y,is_bubble_hover_enabled:C,margin:I=0,message:N,onBubbleClose:Z,onBubbleOpen:L,onClick:k=()=>void 0,relative_render:z=!1,should_disable_pointer_events:S=!1,should_show_cursor:M,zIndex:E="1",data_testid:F,arrow_styles:T}=e,A=i.useRef(),[R,O]=i.useState(void 0),[D,P]=i.useState(!1),{isDesktop:V}=(0,h.F)(),[H,U]=(0,r.X)(null,!0),[q,B]=(0,r.m)(),X=i.useMemo(()=>!V&&void 0===y,[V,y]);i.useEffect(()=>{A.current&&O(A.current)},[j]),i.useEffect(()=>{!U&&X&&P(!1)},[U,X]);let $=()=>{L&&L()},W=()=>{Z&&Z()},G=a()(p,f),K=U&&N&&(!X||D);return(0,l.jsxs)("div",{ref:H,className:a()({"dc-popover__wrapper":z}),onClick:e=>{k(e),X&&P(!D)},"data-testid":"dt_popover_wrapper",children:[z&&(0,l.jsx)("div",{className:"dc-popover__container",style:{zIndex:E},children:(0,l.jsx)("div",{ref:A,className:"dc-popover__container-relative","data-testid":"dt_popover_relative_container"})}),(R||!z)&&(0,l.jsx)(s.Popover,{isOpen:y??(K||C&&B),positions:[t],padding:I+8,containerClassName:a()({"react-tiny-popover-container--disabled-pointer-event":S,"react-tiny-popover-cursor-option":M}),...z?{parentElement:R,contentLocation:e=>{let{childRect:n,popoverRect:l,nudgedLeft:i}=e,o=document.body.clientWidth,a=n.right+(l.width-n.width/2),s=0,r=0;switch(t){case"left":r=-1*Math.abs((l.height>l.width?i:l.width)+I),s=n.height>l.height?(n.height-l.height)/2:-((l.height-n.height)/2*1);break;case"right":r=l.width+I,s=n.height>l.height?(n.height-l.height)/2:-((l.height-n.height)/2*1);break;case"top":r=a>o?-1*Math.abs(a-o):0,s=-1*Math.abs(l.height+I);break;case"bottom":r=a>o?-1*Math.abs(a-o):0,s=n.height+I}return{top:s,left:r}}}:{containerStyle:{zIndex:E}},content:e=>{let{position:t,childRect:n,popoverRect:i}=e;return(0,l.jsx)(s.ArrowContainer,{position:t,childRect:n,popoverRect:i,arrowColor:j?"var(--status-danger)":"var(--general-active)",arrowSize:5,arrowStyle:z?{borderTop:"10px solid transparent",borderLeft:"10px solid transparent",borderRight:`10px solid ${j?"var(--status-danger)":"var(--general-active)"}`,transform:"rotate(315deg)",right:"0px",top:"5px",height:"10px",margin:"auto",bottom:"0px"}:{...T},children:(0,l.jsxs)("div",{id:w,onMouseEnter:$,onMouseLeave:W,className:a()(g,"dc-popover__bubble",{"dc-popover__bubble--error":j}),ref:q,children:[!_&&"info"===f&&(0,l.jsx)("i",{className:"dc-popover__bubble__icon",children:(0,l.jsx)(c.Z,{})}),j&&(0,l.jsx)(m.Z,{size:"xxs",color:"colored-background",children:N})||(0,l.jsx)(m.Z,{lineHeight:"md",size:"xxs",className:"dc-popover__bubble__text",children:N})]})})},children:(0,l.jsx)("div",{"data-testid":F,className:a()("dc-popover",o),id:w,children:(0,l.jsxs)("div",{className:a()(x,"dc-popover__target"),children:[!b&&(0,l.jsxs)("i",{className:N?"dc-popover__target__icon":"dc-popover__target__icon--disabled",children:["info"===f&&(0,l.jsx)(c.Z,{className:G}),"question"===f&&(0,l.jsx)(u.Z,{className:G}),"dot"===f&&(0,l.jsx)(d.Z,{className:G}),"counter"===f&&(0,l.jsx)("span",{className:G,children:v})]}),n]})})})]})}},86278:function(e,t,n){n.d(t,{X:function(){return i},m:function(){return o}});var l=n(67294);let i=(e,t)=>{let[n,i]=l.useState(!1),o=l.useRef(null),a=e||o,s=()=>i(!0),r=()=>i(!1);return l.useEffect(()=>{let e=a.current;if(e)return t?(e.addEventListener("mouseenter",s),e.addEventListener("mouseleave",r)):(e.addEventListener("mouseover",s),e.addEventListener("mouseout",r)),()=>{t?(e.removeEventListener("mouseenter",s),e.removeEventListener("mouseleave",r)):(e.removeEventListener("mouseover",s),e.removeEventListener("mouseout",r))}},[a,t]),[a,n]},o=()=>{let[e,t]=l.useState(!1),n=l.useCallback(()=>t(!0),[]),i=l.useCallback(()=>t(!1),[]),o=l.useRef(null);return[l.useCallback(e=>{o.current&&(o.current.removeEventListener("mouseover",n),o.current.removeEventListener("mouseout",i)),o.current=e,o.current&&(o.current.addEventListener("mouseover",n),o.current.addEventListener("mouseout",i))},[n,i]),e]}},83257:function(e,t,n){n.d(t,{Z:function(){return o}});var l=n(67294),i=n(83274);let o=()=>{let{ui:e}=(0,i.oR)()??{ui:{setDarkMode:()=>{},is_dark_mode_on:!1}},{setDarkMode:t,is_dark_mode_on:n}=e;return{toggleTheme:(0,l.useCallback)(()=>{let e=document.querySelector("body");e&&(e.classList.contains("theme--dark")?(localStorage.setItem("theme","light"),e.classList.remove("theme--dark"),e.classList.add("theme--light"),t(!1)):(localStorage.setItem("theme","dark"),e.classList.remove("theme--light"),e.classList.add("theme--dark"),t(!0)))},[t]),is_dark_mode_on:n,setDarkMode:t}}}}]);
+"use strict";
+(self.webpackChunkbot = self.webpackChunkbot || []).push([
+  ["394"],
+  {
+    71035: function (e, t, n) {
+      n.r(t), n.d(t, { default: () => tu });
+      var l = n("85893"),
+        i = n("67294"),
+        o = n("67026"),
+        a = n("92198"),
+        s = n("89250"),
+        r = n("30453"),
+        c = n("37979"),
+        d = n("2502"),
+        u = n("89471");
+      let h = function () {
+        let e = (0, s.TH)(),
+          t = (0, s.s0)();
+        return {
+          deleteQueryString: function (n) {
+            let l = new URLSearchParams(e.search);
+            l.delete(n), t({ search: l.toString() }, { replace: !0 });
+          },
+          queryString: (function () {
+            let t = new URLSearchParams(e.search),
+              n = {};
+            return (
+              t.forEach((e, t) => {
+                n[t] = e;
+              }),
+              n
+            );
+          })(),
+          setQueryString: function (n) {
+            !(function (n) {
+              let l = new URLSearchParams(e.search);
+              Object.entries(n).forEach((e) => {
+                let [t, n] = e;
+                void 0 === n ? l.delete(t) : l.set(t, n);
+              }),
+                t({ search: l.toString() }, { replace: !0 });
+            })(n);
+          },
+        };
+      };
+      function m(e) {
+        let { deleteQueryString: t, queryString: n, setQueryString: l } = h(),
+          { isDesktop: o } = (0, d.F)(),
+          [a, s] = (0, u.Sx)(),
+          r = () => {
+            if (
+              (!n.modal && s.setAll([]),
+              (null == e ? void 0 : e.shouldReinitializeModals) !== void 0 &&
+                !1 === e.shouldReinitializeModals)
+            )
+              t("modal");
+            else {
+              let e = n.modal;
+              if (e) {
+                let t = e.split(","),
+                  n = t.slice(-1)[0];
+                s.setAll([]),
+                  t.forEach((e) => {
+                    s.set(e, !o);
+                  }),
+                  s.set(n, !0);
+              }
+            }
+          };
+        return (
+          (0, i.useEffect)(() => {
+            r();
+          }, []),
+          (0, i.useEffect)(() => {
+            !(null == n ? void 0 : n.modal) && s.reset();
+          }, [null == n ? void 0 : n.modal]),
+          (0, u.OR)("popstate", () => {
+            r();
+          }),
+          {
+            hideModal: (e) => {
+              let i = n.modal;
+              if (i) {
+                let n = i.split(",");
+                if (null == e ? void 0 : e.shouldHideAllModals)
+                  a.forEach((e, n) => {
+                    s.set(n, !1), t("modal");
+                  });
+                else if (null == e ? void 0 : e.shouldHidePreviousModals) {
+                  if (n.length > 1) {
+                    let e = n.shift();
+                    n.forEach((e) => {
+                      s.set(e, !1);
+                    }),
+                      (n = [e ?? ""]),
+                      l({ modal: e });
+                  } else 1 === n.length ? l({ modal: n[0] }) : t("modal");
+                } else {
+                  let e = n.pop(),
+                    i = n.slice(-1)[0];
+                  i ? (s.set(e, !1), s.set(i, !0)) : s.set(e, !1),
+                    0 === n.length ? t("modal") : l({ modal: n.join(",") });
+                }
+              }
+            },
+            isModalOpenFor: (e) => a.get(e) || !1,
+            showModal: (e, t) => {
+              let i = n.modal;
+              if (i) {
+                let n = i.split(","),
+                  a = n.slice(-1)[0];
+                if (a === e) return;
+                (null == t ? void 0 : t.shouldStackModals) === !1
+                  ? s.set(a, !1)
+                  : s.set(a, (null == t ? void 0 : t.shouldStackModals) || !o),
+                  s.set(e, !0),
+                  n.push(e),
+                  l({
+                    modal: (null == t ? void 0 : t.shouldClearPreviousModals)
+                      ? e
+                      : n.join(","),
+                  });
+              } else s.set(e, !0), l({ modal: e });
+            },
+          }
+        );
+      }
+      let g = () => {
+        let e = localStorage.getItem("active_tab"),
+          t = ["dashboard", "bot_builder", "chart", "tutorial"],
+          n = t[Number(e)],
+          l = window.location.href.split("#")[0];
+        return `${l}#${n}`;
+      };
+      var x = n("32305"),
+        p = n("96223"),
+        v = n("3693"),
+        _ = n("98146"),
+        b = n("64410"),
+        j = n("918"),
+        f = n("50051"),
+        w = n("16496"),
+        y = n("59001"),
+        C = n("57218"),
+        I = n("12811"),
+        N = n("28505"),
+        Z = n("73971"),
+        L = n("99243"),
+        k = n("63066"),
+        z = n("96396"),
+        S = n("14249"),
+        M = n("45322"),
+        E = n("34273"),
+        F = n("473");
+      let T = [
+        {
+          code: "EN",
+          displayName: "English",
+          icon: (0, l.jsx)(x.Z, { height: 24, width: 36 }),
+          placeholderIcon: (0, l.jsx)(x.Z, { height: 12, width: 18 }),
+          placeholderIconInMobile: (0, l.jsx)(x.Z, {
+            height: 14.67,
+            width: 22,
+          }),
+        },
+        {
+          code: "AR",
+          displayName: "العربية",
+          icon: (0, l.jsx)(p.Z, { height: 24, width: 36 }),
+          placeholderIcon: (0, l.jsx)(p.Z, { height: 12, width: 18 }),
+          placeholderIconInMobile: (0, l.jsx)(p.Z, {
+            height: 14.67,
+            width: 22,
+          }),
+        },
+        {
+          code: "BN",
+          displayName: "বাংলা",
+          icon: (0, l.jsx)(v.Z, { height: 24, width: 36 }),
+          placeholderIcon: (0, l.jsx)(v.Z, { height: 12, width: 18 }),
+          placeholderIconInMobile: (0, l.jsx)(v.Z, {
+            height: 14.67,
+            width: 22,
+          }),
+        },
+        {
+          code: "DE",
+          displayName: "Deutsch",
+          icon: (0, l.jsx)(_.Z, { height: 24, width: 36 }),
+          placeholderIcon: (0, l.jsx)(_.Z, { height: 12, width: 18 }),
+          placeholderIconInMobile: (0, l.jsx)(_.Z, {
+            height: 14.67,
+            width: 22,
+          }),
+        },
+        {
+          code: "ES",
+          displayName: "Espa\xf1ol",
+          icon: (0, l.jsx)(b.Z, { height: 24, width: 36 }),
+          placeholderIcon: (0, l.jsx)(b.Z, { height: 12, width: 18 }),
+          placeholderIconInMobile: (0, l.jsx)(b.Z, {
+            height: 14.67,
+            width: 22,
+          }),
+        },
+        {
+          code: "FR",
+          displayName: "Fran\xe7ais",
+          icon: (0, l.jsx)(j.Z, { height: 24, width: 36 }),
+          placeholderIcon: (0, l.jsx)(j.Z, { height: 12, width: 18 }),
+          placeholderIconInMobile: (0, l.jsx)(j.Z, {
+            height: 14.67,
+            width: 22,
+          }),
+        },
+        {
+          code: "IT",
+          displayName: "Italiano",
+          icon: (0, l.jsx)(f.Z, { height: 24, width: 36 }),
+          placeholderIcon: (0, l.jsx)(f.Z, { height: 12, width: 18 }),
+          placeholderIconInMobile: (0, l.jsx)(f.Z, {
+            height: 14.67,
+            width: 22,
+          }),
+        },
+        {
+          code: "SW",
+          displayName: "Kiswahili",
+          icon: (0, l.jsx)(w.Z, { height: 24, width: 36 }),
+          placeholderIcon: (0, l.jsx)(w.Z, { height: 12, width: 18 }),
+          placeholderIconInMobile: (0, l.jsx)(w.Z, {
+            height: 14.67,
+            width: 22,
+          }),
+        },
+        {
+          code: "KM",
+          displayName: "ខ្មែរ",
+          icon: (0, l.jsx)(y.Z, { height: 24, width: 36 }),
+          placeholderIcon: (0, l.jsx)(y.Z, { height: 12, width: 18 }),
+          placeholderIconInMobile: (0, l.jsx)(y.Z, {
+            height: 14.67,
+            width: 22,
+          }),
+        },
+        {
+          code: "KO",
+          displayName: "한국어",
+          icon: (0, l.jsx)(C.Z, { height: 24, width: 36 }),
+          placeholderIcon: (0, l.jsx)(C.Z, { height: 12, width: 18 }),
+          placeholderIconInMobile: (0, l.jsx)(C.Z, {
+            height: 14.67,
+            width: 22,
+          }),
+        },
+        {
+          code: "PL",
+          displayName: "Polish",
+          icon: (0, l.jsx)(I.Z, { height: 24, width: 36 }),
+          placeholderIcon: (0, l.jsx)(I.Z, { height: 12, width: 18 }),
+          placeholderIconInMobile: (0, l.jsx)(I.Z, {
+            height: 14.67,
+            width: 22,
+          }),
+        },
+        {
+          code: "PT",
+          displayName: "Portugu\xeas",
+          icon: (0, l.jsx)(N.Z, { height: 24, width: 36 }),
+          placeholderIcon: (0, l.jsx)(N.Z, { height: 12, width: 18 }),
+          placeholderIconInMobile: (0, l.jsx)(N.Z, {
+            height: 14.67,
+            width: 22,
+          }),
+        },
+        {
+          code: "RU",
+          displayName: "Русский",
+          icon: (0, l.jsx)(Z.Z, { height: 24, width: 36 }),
+          placeholderIcon: (0, l.jsx)(Z.Z, { height: 12, width: 18 }),
+          placeholderIconInMobile: (0, l.jsx)(Z.Z, {
+            height: 14.67,
+            width: 22,
+          }),
+        },
+        {
+          code: "SI",
+          displayName: "සිංහල",
+          icon: (0, l.jsx)(L.Z, { height: 24, width: 36 }),
+          placeholderIcon: (0, l.jsx)(L.Z, { height: 12, width: 18 }),
+          placeholderIconInMobile: (0, l.jsx)(L.Z, {
+            height: 14.67,
+            width: 22,
+          }),
+        },
+        {
+          code: "TH",
+          displayName: "ไทย",
+          icon: (0, l.jsx)(k.Z, { height: 24, width: 36 }),
+          placeholderIcon: (0, l.jsx)(k.Z, { height: 12, width: 18 }),
+          placeholderIconInMobile: (0, l.jsx)(k.Z, {
+            height: 14.67,
+            width: 22,
+          }),
+        },
+        {
+          code: "TR",
+          displayName: "T\xfcrk\xe7e",
+          icon: (0, l.jsx)(z.Z, { height: 24, width: 36 }),
+          placeholderIcon: (0, l.jsx)(z.Z, { height: 12, width: 18 }),
+          placeholderIconInMobile: (0, l.jsx)(z.Z, {
+            height: 14.67,
+            width: 22,
+          }),
+        },
+        {
+          code: "UZ",
+          displayName: "O'zbek",
+          icon: (0, l.jsx)(S.Z, { height: 24, width: 36 }),
+          placeholderIcon: (0, l.jsx)(S.Z, { height: 12, width: 18 }),
+          placeholderIconInMobile: (0, l.jsx)(S.Z, {
+            height: 14.67,
+            width: 22,
+          }),
+        },
+        {
+          code: "VI",
+          displayName: "Tiếng Việt",
+          icon: (0, l.jsx)(M.Z, { height: 24, width: 36 }),
+          placeholderIcon: (0, l.jsx)(M.Z, { height: 12, width: 18 }),
+          placeholderIconInMobile: (0, l.jsx)(M.Z, {
+            height: 14.67,
+            width: 22,
+          }),
+        },
+        {
+          code: "ZH_CN",
+          displayName: "简体中文",
+          icon: (0, l.jsx)(E.Z, { height: 24, width: 36 }),
+          placeholderIcon: (0, l.jsx)(E.Z, { height: 12, width: 18 }),
+          placeholderIconInMobile: (0, l.jsx)(E.Z, {
+            height: 14.67,
+            width: 22,
+          }),
+        },
+        {
+          code: "ZH_TW",
+          displayName: "繁體中文",
+          icon: (0, l.jsx)(F.Z, { height: 24, width: 36 }),
+          placeholderIcon: (0, l.jsx)(F.Z, { height: 12, width: 18 }),
+          placeholderIconInMobile: (0, l.jsx)(F.Z, {
+            height: 14.67,
+            width: 22,
+          }),
+        },
+      ];
+      var A = n("48059"),
+        R = n("44412"),
+        O = n("96877"),
+        D = n("83257"),
+        P = n("53261"),
+        V = n("21456"),
+        H = n("64915");
+      let U = (0, O.Pi)(() => {
+        let { is_dark_mode_on: e, toggleTheme: t } = (0, D.Z)(),
+          { localize: n } = (0, A.T_)();
+        return (0, l.jsx)(H.u, {
+          as: "button",
+          className: "app-footer__icon",
+          tooltipContent: n("Change theme"),
+          onClick: t,
+          children: e
+            ? (0, l.jsx)(V.Z, { iconSize: "xs" })
+            : (0, l.jsx)(P.Z, { iconSize: "xs" }),
+        });
+      });
+      var q = n("79655"),
+        B = n("66175"),
+        X = n("45452"),
+        $ = n("12838");
+      let W = () => {
+          let e = $.fV.getValue($.sE.configServerURL);
+          return e
+            ? (0, l.jsxs)(X.Z, {
+                className: "app-footer__endpoint",
+                color: "red",
+                size: "s",
+                children: [
+                  "The server",
+                  " ",
+                  (0, l.jsx)(q.rU, {
+                    className: "app-footer__endpoint-text",
+                    to: B.xOw.endpoint,
+                    children: "endpoint",
+                  }),
+                  " ",
+                  `is: ${e}`,
+                ],
+              })
+            : null;
+        },
+        G = {
+          exit: [
+            "exitFullscreen",
+            "webkitExitFullscreen",
+            "mozCancelFullScreen",
+            "msExitFullscreen",
+          ],
+          request: [
+            "requestFullscreen",
+            "webkitRequestFullscreen",
+            "mozRequestFullScreen",
+            "msRequestFullscreen",
+          ],
+          screenChange: [
+            "fullscreenchange",
+            "webkitfullscreenchange",
+            "mozfullscreenchange",
+            "MSFullscreenChange",
+          ],
+          screenElement: [
+            "fullscreenElement",
+            "webkitFullscreenElement",
+            "mozFullScreenElement",
+            "msFullscreenElement",
+          ],
+        },
+        K = () => {
+          let [e, t] = (0, i.useState)(!1),
+            { exit: n, request: l, screenChange: o, screenElement: a } = G,
+            s = (0, i.useCallback)(() => t(a.some((e) => document[e])), [a]);
+          return (
+            (0, i.useEffect)(
+              () => (
+                o.forEach((e) => {
+                  document.addEventListener(e, s, !1);
+                }),
+                () => {
+                  o.forEach((e) => {
+                    document.removeEventListener(e, s, !1);
+                  });
+                }
+              ),
+              [s, o]
+            ),
+            {
+              toggleFullScreenMode: (i) => {
+                null == i || i.stopPropagation();
+                let o = n.find((e) => document[e]),
+                  a = l.find((e) => document.documentElement[e]);
+                e && o
+                  ? document[o]()
+                  : a
+                  ? document.documentElement[a]()
+                  : t(!1);
+              },
+            }
+          );
+        };
+      var J = n("69914");
+      let Q = () => {
+          let { toggleFullScreenMode: e } = K(),
+            { localize: t } = (0, A.T_)();
+          return (0, l.jsx)(H.u, {
+            as: "button",
+            className: "app-footer__icon",
+            onClick: e,
+            tooltipContent: t("Full screen"),
+            children: (0, l.jsx)(J.Z, { iconSize: "xs" }),
+          });
+        },
+        Y = (e) => {
+          let { openLanguageSettingModal: t } = e,
+            { currentLang: n, localize: o } = (0, A.T_)(),
+            a = (0, i.useMemo)(() => {
+              var e;
+              return null ===
+                (e = T.find((e) => {
+                  let { code: t } = e;
+                  return t == n;
+                })) || void 0 === e
+                ? void 0
+                : e.placeholderIcon;
+            }, [n]);
+          return (0, l.jsxs)(H.u, {
+            as: "button",
+            className: "app-footer__language",
+            onClick: t,
+            tooltipContent: o("Language"),
+            children: [
+              a,
+              (0, l.jsx)(X.Z, { size: "xs", weight: "bold", children: n }),
+            ],
+          });
+        },
+        ee = () =>
+          "undefined" == typeof navigator ||
+          "boolean" != typeof navigator.onLine ||
+          navigator.onLine,
+        et = () => {
+          let [e, t] = (0, i.useState)(ee()),
+            n = () => t(!0),
+            l = () => t(!1);
+          return (
+            (0, i.useEffect)(
+              () => (
+                window.addEventListener("online", n),
+                window.addEventListener("offline", l),
+                () => {
+                  window.removeEventListener("online", n),
+                    window.removeEventListener("offline", l);
+                }
+              ),
+              []
+            ),
+            e
+          );
+        },
+        en = () => {
+          let [e, t] = (0, i.useState)("online"),
+            n = et();
+          return (
+            (0, i.useEffect)(() => {
+              n ? t("online") : t("offline");
+            }, [n]),
+            e
+          );
+        },
+        el = () => ({
+          blinking: {
+            className:
+              "app-footer__network-status-online app-footer__network-status-blinking",
+            tooltip: (0, A.NC)("Connecting to server"),
+          },
+          offline: {
+            className: "app-footer__network-status-offline",
+            tooltip: "Offline",
+          },
+          online: {
+            className: "app-footer__network-status-online",
+            tooltip: "Online",
+          },
+        }),
+        ei = () => {
+          let e = en(),
+            { className: t, tooltip: n } = (0, i.useMemo)(() => el()[e], [e]);
+          return (0, l.jsx)(H.u, {
+            as: "div",
+            className: "app-footer__icon",
+            "data-testid": "dt_network_status",
+            tooltipContent: (0, A.NC)("Network status: {{status}}", {
+              status: n,
+            }),
+            children: (0, l.jsx)("div", {
+              className: (0, o.Z)("app-footer__network-status", t),
+              "data-testid": "dt_circle",
+            }),
+          });
+        };
+      var eo = n("30381"),
+        ea = n.n(eo),
+        es = n("83274"),
+        er = n("27179"),
+        ec = n("83606");
+      let ed = (0, O.Pi)(() => {
+          let { isDesktop: e } = (0, d.F)(),
+            { common: t } = (0, es.oR)() ?? { common: { server_time: ea()() } };
+          return (0, l.jsx)(H.u, {
+            as: "div",
+            className: "app-footer__icon",
+            "data-testid": "dt_server_time",
+            tooltipContent: t.server_time.format(er.kT),
+            children: (0, l.jsx)(ec.x, {
+              size: e ? "xs" : "sm",
+              children: t.server_time.format(er.Yp),
+            }),
+          });
+        }),
+        eu = () => {
+          let {
+              currentLang: e = "EN",
+              localize: t,
+              switchLanguage: n,
+            } = (0, A.T_)(),
+            { hideModal: i, isModalOpenFor: o, showModal: a } = m();
+          return (0, l.jsxs)("footer", {
+            className: "app-footer",
+            children: [
+              (0, l.jsx)(Q, {}),
+              (0, l.jsx)(Y, {
+                openLanguageSettingModal: () => a("DesktopLanguagesModal"),
+              }),
+              (0, l.jsx)("div", { className: "app-footer__vertical-line" }),
+              (0, l.jsx)(U, {}),
+              (0, l.jsx)("div", { className: "app-footer__vertical-line" }),
+              (0, l.jsx)(ed, {}),
+              (0, l.jsx)("div", { className: "app-footer__vertical-line" }),
+              (0, l.jsx)(ei, {}),
+              (0, l.jsx)(W, {}),
+              o("DesktopLanguagesModal") &&
+                (0, l.jsx)(R.u, {
+                  headerTitle: t("Select Language"),
+                  isModalOpen: !0,
+                  languages: T,
+                  onClose: i,
+                  onLanguageSwitch: (e) => {
+                    n(e),
+                      i(),
+                      window.location.replace(g()),
+                      window.location.reload();
+                  },
+                  selectedLanguage: e,
+                }),
+            ],
+          });
+        };
+      var eh = n("45221");
+      let em = {
+          aud: (0, i.lazy)(() =>
+            n
+              .e("609")
+              .then(n.bind(n, 19673))
+              .then((e) => ({ default: e.CurrencyAudIcon }))
+          ),
+          bch: (0, i.lazy)(() =>
+            n
+              .e("609")
+              .then(n.bind(n, 19673))
+              .then((e) => ({ default: e.CurrencyBchIcon }))
+          ),
+          btc: (0, i.lazy)(() =>
+            n
+              .e("609")
+              .then(n.bind(n, 19673))
+              .then((e) => ({ default: e.CurrencyBtcIcon }))
+          ),
+          busd: (0, i.lazy)(() =>
+            n
+              .e("609")
+              .then(n.bind(n, 19673))
+              .then((e) => ({ default: e.CurrencyBusdIcon }))
+          ),
+          dai: (0, i.lazy)(() =>
+            n
+              .e("609")
+              .then(n.bind(n, 19673))
+              .then((e) => ({ default: e.CurrencyDaiIcon }))
+          ),
+          eth: (0, i.lazy)(() =>
+            n
+              .e("609")
+              .then(n.bind(n, 19673))
+              .then((e) => ({ default: e.CurrencyEthIcon }))
+          ),
+          eur: (0, i.lazy)(() =>
+            n
+              .e("609")
+              .then(n.bind(n, 19673))
+              .then((e) => ({ default: e.CurrencyEurIcon }))
+          ),
+          "eur-check": (0, i.lazy)(() =>
+            n
+              .e("609")
+              .then(n.bind(n, 19673))
+              .then((e) => ({ default: e.CurrencyEurIcon }))
+          ),
+          eurs: (0, i.lazy)(() =>
+            n
+              .e("609")
+              .then(n.bind(n, 19673))
+              .then((e) => ({ default: e.CurrencyEursIcon }))
+          ),
+          eusdt: (0, i.lazy)(() =>
+            n
+              .e("609")
+              .then(n.bind(n, 19673))
+              .then((e) => ({ default: e.CurrencyUsdtIcon }))
+          ),
+          gbp: (0, i.lazy)(() =>
+            n
+              .e("609")
+              .then(n.bind(n, 19673))
+              .then((e) => ({ default: e.CurrencyGbpIcon }))
+          ),
+          idk: (0, i.lazy)(() =>
+            n
+              .e("609")
+              .then(n.bind(n, 19673))
+              .then((e) => ({ default: e.CurrencyIdkIcon }))
+          ),
+          ltc: (0, i.lazy)(() =>
+            n
+              .e("609")
+              .then(n.bind(n, 19673))
+              .then((e) => ({ default: e.CurrencyLtcIcon }))
+          ),
+          pax: (0, i.lazy)(() =>
+            n
+              .e("609")
+              .then(n.bind(n, 19673))
+              .then((e) => ({ default: e.CurrencyPaxIcon }))
+          ),
+          tusd: (0, i.lazy)(() =>
+            n
+              .e("609")
+              .then(n.bind(n, 19673))
+              .then((e) => ({ default: e.CurrencyTusdIcon }))
+          ),
+          tusdt: (0, i.lazy)(() =>
+            n
+              .e("609")
+              .then(n.bind(n, 19673))
+              .then((e) => ({ default: e.CurrencyUsdtIcon }))
+          ),
+          unknown: (0, i.lazy)(() =>
+            n
+              .e("609")
+              .then(n.bind(n, 19673))
+              .then((e) => ({ default: e.CurrencyPlaceholderIcon }))
+          ),
+          usd: (0, i.lazy)(() =>
+            n
+              .e("609")
+              .then(n.bind(n, 19673))
+              .then((e) => ({ default: e.CurrencyUsdIcon }))
+          ),
+          usdc: (0, i.lazy)(() =>
+            n
+              .e("609")
+              .then(n.bind(n, 19673))
+              .then((e) => ({ default: e.CurrencyUsdcIcon }))
+          ),
+          usdk: (0, i.lazy)(() =>
+            n
+              .e("609")
+              .then(n.bind(n, 19673))
+              .then((e) => ({ default: e.CurrencyUsdkIcon }))
+          ),
+          ust: (0, i.lazy)(() =>
+            n
+              .e("609")
+              .then(n.bind(n, 19673))
+              .then((e) => ({ default: e.CurrencyUsdtIcon }))
+          ),
+          virtual: (0, i.lazy)(() =>
+            n
+              .e("609")
+              .then(n.bind(n, 19673))
+              .then((e) => ({ default: e.CurrencyDemoIcon }))
+          ),
+          xrp: (0, i.lazy)(() =>
+            n
+              .e("609")
+              .then(n.bind(n, 19673))
+              .then((e) => ({ default: e.CurrencyXrpIcon }))
+          ),
+          algo: (0, i.lazy)(() =>
+            n
+              .e("609")
+              .then(n.bind(n, 19673))
+              .then((e) => ({ default: e.CurrencyAlgoIcon }))
+          ),
+          avax: (0, i.lazy)(() =>
+            n
+              .e("609")
+              .then(n.bind(n, 19673))
+              .then((e) => ({ default: e.CurrencyAvaxIcon }))
+          ),
+          bat: (0, i.lazy)(() =>
+            n
+              .e("609")
+              .then(n.bind(n, 19673))
+              .then((e) => ({ default: e.CurrencyBatIcon }))
+          ),
+          bnb: (0, i.lazy)(() =>
+            n
+              .e("609")
+              .then(n.bind(n, 19673))
+              .then((e) => ({ default: e.CurrencyBnbIcon }))
+          ),
+          dash: (0, i.lazy)(() =>
+            n
+              .e("609")
+              .then(n.bind(n, 19673))
+              .then((e) => ({ default: e.CurrencyDashIcon }))
+          ),
+          doge: (0, i.lazy)(() =>
+            n
+              .e("609")
+              .then(n.bind(n, 19673))
+              .then((e) => ({ default: e.CurrencyDogeIcon }))
+          ),
+          dot: (0, i.lazy)(() =>
+            n
+              .e("609")
+              .then(n.bind(n, 19673))
+              .then((e) => ({ default: e.CurrencyDotIcon }))
+          ),
+          eos: (0, i.lazy)(() =>
+            n
+              .e("609")
+              .then(n.bind(n, 19673))
+              .then((e) => ({ default: e.CurrencyEosIcon }))
+          ),
+          etc: (0, i.lazy)(() =>
+            n
+              .e("609")
+              .then(n.bind(n, 19673))
+              .then((e) => ({ default: e.CurrencyEtcIcon }))
+          ),
+          fil: (0, i.lazy)(() =>
+            n
+              .e("609")
+              .then(n.bind(n, 19673))
+              .then((e) => ({ default: e.CurrencyFilIcon }))
+          ),
+          iota: (0, i.lazy)(() =>
+            n
+              .e("609")
+              .then(n.bind(n, 19673))
+              .then((e) => ({ default: e.CurrencyIotaIcon }))
+          ),
+          link: (0, i.lazy)(() =>
+            n
+              .e("609")
+              .then(n.bind(n, 19673))
+              .then((e) => ({ default: e.CurrencyLinkIcon }))
+          ),
+          matic: (0, i.lazy)(() =>
+            n
+              .e("609")
+              .then(n.bind(n, 19673))
+              .then((e) => ({ default: e.CurrencyMaticIcon }))
+          ),
+          mkr: (0, i.lazy)(() =>
+            n
+              .e("609")
+              .then(n.bind(n, 19673))
+              .then((e) => ({ default: e.CurrencyMkrIcon }))
+          ),
+          mcd: (0, i.lazy)(() =>
+            n
+              .e("609")
+              .then(n.bind(n, 19673))
+              .then((e) => ({ default: e.CurrencyMultiCollateralDaiIcon }))
+          ),
+          neo: (0, i.lazy)(() =>
+            n
+              .e("609")
+              .then(n.bind(n, 19673))
+              .then((e) => ({ default: e.CurrencyNeoIcon }))
+          ),
+          none: (0, i.lazy)(() =>
+            n
+              .e("609")
+              .then(n.bind(n, 19673))
+              .then((e) => ({ default: e.CurrencyNoneIcon }))
+          ),
+          omg: (0, i.lazy)(() =>
+            n
+              .e("609")
+              .then(n.bind(n, 19673))
+              .then((e) => ({ default: e.CurrencyOmgIcon }))
+          ),
+          p2p: (0, i.lazy)(() =>
+            n
+              .e("609")
+              .then(n.bind(n, 19673))
+              .then((e) => ({ default: e.CurrencyP2PIcon }))
+          ),
+          scd: (0, i.lazy)(() =>
+            n
+              .e("609")
+              .then(n.bind(n, 19673))
+              .then((e) => ({ default: e.CurrencySingleCollateralDaiIcon }))
+          ),
+          sol: (0, i.lazy)(() =>
+            n
+              .e("609")
+              .then(n.bind(n, 19673))
+              .then((e) => ({ default: e.CurrencySolIcon }))
+          ),
+          terra: (0, i.lazy)(() =>
+            n
+              .e("609")
+              .then(n.bind(n, 19673))
+              .then((e) => ({ default: e.CurrencyTerraIcon }))
+          ),
+          trx: (0, i.lazy)(() =>
+            n
+              .e("609")
+              .then(n.bind(n, 19673))
+              .then((e) => ({ default: e.CurrencyTrxIcon }))
+          ),
+          uni: (0, i.lazy)(() =>
+            n
+              .e("609")
+              .then(n.bind(n, 19673))
+              .then((e) => ({ default: e.CurrencyUniIcon }))
+          ),
+          xlm: (0, i.lazy)(() =>
+            n
+              .e("609")
+              .then(n.bind(n, 19673))
+              .then((e) => ({ default: e.CurrencyXlmIcon }))
+          ),
+          xmr: (0, i.lazy)(() =>
+            n
+              .e("609")
+              .then(n.bind(n, 19673))
+              .then((e) => ({ default: e.CurrencyXmrIcon }))
+          ),
+          xtz: (0, i.lazy)(() =>
+            n
+              .e("609")
+              .then(n.bind(n, 19673))
+              .then((e) => ({ default: e.CurrencyXtzIcon }))
+          ),
+          zec: (0, i.lazy)(() =>
+            n
+              .e("609")
+              .then(n.bind(n, 19673))
+              .then((e) => ({ default: e.CurrencyZecIcon }))
+          ),
+        },
+        eg = (e) => {
+          let { currency: t, isVirtual: n } = e,
+            o = n
+              ? em.virtual
+              : em[null == t ? void 0 : t.toLowerCase()] || em.unknown;
+          return (0, l.jsx)(i.Suspense, {
+            fallback: null,
+            children: (0, l.jsx)(o, { iconSize: "sm" }),
+          });
+        };
+      var ex = n("79649");
+      let ep = (e) => {
+        var t;
+        let { allBalanceData: n } = e,
+          { accountList: o, activeLoginid: a } = (0, ex.T)(),
+          s = (0, i.useMemo)(
+            () => (null == o ? void 0 : o.find((e) => e.loginid === a)),
+            [a, o]
+          ),
+          r =
+            null == n
+              ? void 0
+              : null === (t = n.accounts) || void 0 === t
+              ? void 0
+              : t[(null == s ? void 0 : s.loginid) ?? ""];
+        return {
+          data: (0, i.useMemo)(() => {
+            var e, t;
+            return s
+              ? {
+                  ...s,
+                  balance:
+                    (0, B.oC5)(
+                      null == r
+                        ? void 0
+                        : null === (e = r.balance) || void 0 === e
+                        ? void 0
+                        : e.toFixed((0, B.i4S)(r.currency))
+                    ) ?? "0",
+                  currencyLabel: (null == s ? void 0 : s.is_virtual)
+                    ? (0, A.NC)("Demo")
+                    : null == s
+                    ? void 0
+                    : s.currency,
+                  icon: (0, l.jsx)(eg, {
+                    currency:
+                      null == s
+                        ? void 0
+                        : null === (t = s.currency) || void 0 === t
+                        ? void 0
+                        : t.toLowerCase(),
+                    isVirtual: !!(null == s ? void 0 : s.is_virtual),
+                  }),
+                  isVirtual: !!(null == s ? void 0 : s.is_virtual),
+                  isActive: (null == s ? void 0 : s.loginid) === a,
+                }
+              : void 0;
+          }, [s, a, n]),
+        };
+      };
+      var ev = n("77898"),
+        e_ = n("16857"),
+        eb = n("70361");
+      let ej = () =>
+          (0, l.jsxs)("div", {
+            className: "d-apollo-logo",
+            children: [
+              (0, l.jsxs)("div", {
+                className: "logo-holder",
+                children: [
+                  (0, l.jsx)("img", {
+                    src: "/dollar_logo.jpg",
+                    alt: "custom Logo",
+                    className: "d-apollo-logo__image",
+                  }),
+                  (0, l.jsx)(X.Z, {
+                    color: "less-prominent",
+                    lineHeight: "xs",
+                    size: "xs",
+                    weight: "bold",
+                    align: "center",
+                    className: "dc-contract-card-message",
+                    children: "Oruchotrader",
+                  }),
+                ],
+              }),
+              (0, l.jsx)("a", {
+                href: "https://t.me/oruchotradersite",
+                target: "_blank",
+                rel: "noopener noreferrer",
+                className: "d-apollo-logo__icon",
+                children: (0, l.jsx)(eb.Ww5, {}),
+              }),
+            ],
+          }),
+        ef = () => {
+          let { isDesktop: e } = (0, d.F)();
+          return e ? (0, l.jsx)(ej, {}) : null;
+        };
+      var ew = n("24561");
+      let ey = (e) => {
+          let { isMobile: t } = e;
+          return (0, l.jsx)(l.Fragment, {
+            children: t
+              ? (0, l.jsxs)(l.Fragment, {
+                  children: [
+                    (0, l.jsx)("circle", { cx: "14", cy: "22", r: "13" }),
+                    (0, l.jsx)("rect", {
+                      height: "7",
+                      rx: "4",
+                      ry: "4",
+                      width: "76",
+                      x: "35",
+                      y: "19",
+                    }),
+                    (0, l.jsx)("rect", {
+                      height: "32",
+                      rx: "4",
+                      ry: "4",
+                      width: "82",
+                      x: "120",
+                      y: "6",
+                    }),
+                  ],
+                })
+              : (0, l.jsxs)(l.Fragment, {
+                  children: [
+                    (0, l.jsx)("circle", { cx: "14", cy: "22", r: "12" }),
+                    (0, l.jsx)("circle", { cx: "58", cy: "22", r: "12" }),
+                    (0, l.jsx)("rect", {
+                      height: "7",
+                      rx: "4",
+                      ry: "4",
+                      width: "76",
+                      x: "150",
+                      y: "20",
+                    }),
+                    (0, l.jsx)("circle", { cx: "118", cy: "24", r: "13" }),
+                    (0, l.jsx)("rect", {
+                      height: "30",
+                      rx: "4",
+                      ry: "4",
+                      width: "1",
+                      x: "87",
+                      y: "8",
+                    }),
+                    (0, l.jsx)("rect", {
+                      height: "32",
+                      rx: "4",
+                      ry: "4",
+                      width: "82",
+                      x: "250",
+                      y: "8",
+                    }),
+                  ],
+                }),
+          });
+        },
+        eC = (e) => {
+          let { isMobile: t, speed: n } = e;
+          return (0, l.jsx)(ew.ZP, {
+            "data-testid": "dt_accounts_info_loader",
+            height: t ? 42 : 46,
+            speed: n,
+            width: t ? 216 : 350,
+            backgroundColor: "var(--general-section-1)",
+            foregroundColor: "var(--general-hover)",
+            children: (0, l.jsx)(ey, { isMobile: t }),
+          });
+        };
+      var eI = n("30394"),
+        eN = n("88199"),
+        eZ = n("42457"),
+        eL = n("33281"),
+        ek = n("47342"),
+        ez = n("63387"),
+        eS = n.n(ez);
+      let eM = (e) => {
+        let { width: t, height: n } = e;
+        return (0, l.jsx)("div", {
+          className: "skeleton",
+          style: { width: t, height: n },
+        });
+      };
+      var eE = n("44884"),
+        eF = n("37410"),
+        eT = n("37528");
+      let eA = {
+          currency: " ",
+          currencyLabel: "Options & Multipliers",
+          is_virtual: 1,
+          loginid: "",
+          is_disabled: !1,
+          balance: "",
+          icon: (0, l.jsx)(eF.Z, { width: 24, height: 24 }),
+          isActive: !1,
+          isVirtual: !0,
+        },
+        eR = (e) => Number(e.replace(/,/g, "")),
+        eO = () =>
+          (0, l.jsx)(eT.i, {
+            color: "var(--general-section-2)",
+            height: "4px",
+          }),
+        eD = (e) => {
+          let { oAuthLogout: t, loginid: n, is_logging_out: i } = e,
+            o =
+              (null == n ? void 0 : n.includes("CR")) ||
+              (null == n ? void 0 : n.includes("MF"));
+          return (0, l.jsxs)("div", {
+            className: "",
+            children: [
+              (0, l.jsx)(ek.T.TradersHubLink, {
+                href: B.xOw.traders_hub,
+                children: (0, A.NC)(
+                  "Looking for CFD accounts? Go to Trader's Hub"
+                ),
+              }),
+              (0, l.jsx)(eO, {}),
+              (0, l.jsxs)("div", {
+                className: eS()("account-switcher-footer__actions", {
+                  "account-switcher-footer__actions--hide-manage-button": !o,
+                }),
+                children: [
+                  o &&
+                    (0, l.jsx)(eh.Z, {
+                      id: "manage-button",
+                      className: "manage-button",
+                      onClick: () => location.replace("https://app.deriv.com"),
+                      children: (0, l.jsx)(A.Xx, {
+                        i18n_default_text: "Manage accounts",
+                      }),
+                    }),
+                  (0, l.jsx)(ek.T.Footer, {
+                    children: i
+                      ? (0, l.jsx)("div", {
+                          className: "deriv-account-switcher__logout--loader",
+                          children: (0, l.jsx)(eM, {
+                            width: "120px",
+                            height: "12px",
+                          }),
+                        })
+                      : (0, l.jsxs)("div", {
+                          id: "dt_logout_button",
+                          className: "deriv-account-switcher__logout",
+                          onClick: t,
+                          children: [
+                            (0, l.jsx)(X.Z, {
+                              color: "prominent",
+                              size: "xs",
+                              align: "left",
+                              className: "deriv-account-switcher__logout-text",
+                              children: (0, A.NC)("Logout"),
+                            }),
+                            (0, l.jsx)(eE.Z, {
+                              iconSize: "xs",
+                              fill: "var(--text-general)",
+                              className: "icon-general-fill-path",
+                            }),
+                          ],
+                        }),
+                  }),
+                ],
+              }),
+            ],
+          });
+        },
+        eP = (e) => {
+          let {
+            tabs_labels: t,
+            modifiedVRTCRAccountList: n,
+            switchAccount: i,
+            isVirtual: a,
+            activeLoginId: s,
+            oAuthLogout: r,
+            is_logging_out: c,
+          } = e;
+          return (0, l.jsxs)(l.Fragment, {
+            children: [
+              (0, l.jsx)(
+                ek.T.AccountsPanel,
+                {
+                  isOpen: !0,
+                  title: (0, A.NC)("Deriv account"),
+                  className: "account-switcher-panel",
+                  children:
+                    n &&
+                    n.map((e) =>
+                      (0, l.jsx)(
+                        "span",
+                        {
+                          className: (0, o.Z)("account-switcher__item", {
+                            "account-switcher__item--disabled": e.is_disabled,
+                          }),
+                          children: (0, l.jsx)(ek.T.AccountsItem, {
+                            account: e,
+                            onSelectAccount: () => {
+                              !e.is_disabled && i(e.loginid);
+                            },
+                            onResetBalance:
+                              a && s === e.loginid && 1e4 !== eR(e.balance)
+                                ? () => {
+                                    var e;
+                                    null === eN.api_base ||
+                                      void 0 === eN.api_base ||
+                                      null === (e = eN.api_base.api) ||
+                                      void 0 === e ||
+                                      e.send({ topup_virtual: 1 });
+                                  }
+                                : void 0,
+                          }),
+                        },
+                        e.loginid
+                      )
+                    ),
+                },
+                t.demo.toLowerCase()
+              ),
+              (0, l.jsx)(eO, {}),
+              (0, l.jsx)(eD, { loginid: s, oAuthLogout: r, is_logging_out: c }),
+            ],
+          });
+        },
+        eV = (e) => {
+          let {
+              isVirtual: t,
+              tabs_labels: n,
+              modifiedMFAccountList: i,
+              switchAccount: a,
+              is_low_risk_country: s,
+            } = e,
+            r =
+              (null == i ? void 0 : i.length) !== 0 && s
+                ? (0, A.NC)("Eu Deriv accounts")
+                : (0, A.NC)("Deriv accounts");
+          return (0, l.jsx)(
+            ek.T.AccountsPanel,
+            {
+              isOpen: !0,
+              title: r,
+              className: "account-switcher-panel",
+              children: i.map(
+                (e) => (
+                  (e.currencyLabel = (0, A.NC)("Multipliers")),
+                  (0, l.jsx)(
+                    "span",
+                    {
+                      className: (0, o.Z)("account-switcher__item", {
+                        "account-switcher__item--disabled": e.is_disabled,
+                      }),
+                      children: (0, l.jsx)(ek.T.AccountsItem, {
+                        account: e,
+                        onSelectAccount: () => {
+                          !e.is_disabled && a(e.loginid);
+                        },
+                      }),
+                    },
+                    e.loginid
+                  )
+                )
+              ),
+            },
+            t ? n.real.toLowerCase() : n.demo.toLowerCase()
+          );
+        };
+      var eH = n("11527");
+      let eU = (e) => {
+          var t, n;
+          let { isVirtual: i, tabs_labels: o, is_low_risk_country: a } = e;
+          return a
+            ? (0, l.jsx)(
+                ek.T.AccountsPanel,
+                {
+                  isOpen: !0,
+                  title: (0, A.NC)("Non-Eu Deriv account"),
+                  className: "account-switcher-panel",
+                  children: (0, l.jsxs)("div", {
+                    className: "account-switcher-panel__no-eu-accounts",
+                    children: [
+                      (0, l.jsx)(ek.T.AccountsItem, {
+                        account: eA,
+                        onSelectAccount: () => {},
+                      }),
+                      (0, l.jsx)(eO, {}),
+                      (0, l.jsx)(eH.z, {
+                        id: "add-button",
+                        className: "add-button",
+                        onClick: () => location.replace(B.xOw.traders_hub),
+                        children: (0, l.jsx)(A.Xx, {
+                          i18n_default_text: "Add",
+                        }),
+                      }),
+                    ],
+                  }),
+                },
+                i
+                  ? null == o
+                    ? void 0
+                    : null === (n = o.real) || void 0 === n
+                    ? void 0
+                    : n.toLowerCase()
+                  : null == o
+                  ? void 0
+                  : null === (t = o.demo) || void 0 === t
+                  ? void 0
+                  : t.toLowerCase()
+              )
+            : null;
+        },
+        eq = (e) => {
+          let {
+            isVirtual: t,
+            tabs_labels: n,
+            modifiedCRAccountList: i,
+            modifiedMFAccountList: a,
+            is_low_risk_country: s,
+            switchAccount: r,
+          } = e;
+          if (!s && i && (null == i ? void 0 : i.length) === 0) return null;
+          let c =
+            (null == a ? void 0 : a.length) === 0
+              ? (0, A.NC)("Deriv accounts")
+              : (0, A.NC)("Non-Eu Deriv account");
+          return (0, l.jsx)(l.Fragment, {
+            children: (0, l.jsx)(
+              ek.T.AccountsPanel,
+              {
+                isOpen: !0,
+                title: c,
+                className: "account-switcher-panel",
+                style: { maxHeight: "220px" },
+                children: i.map((e) =>
+                  (0, l.jsx)(
+                    "span",
+                    {
+                      className: (0, o.Z)("account-switcher__item", {
+                        "account-switcher__item--disabled": e.is_disabled,
+                      }),
+                      children: (0, l.jsx)(ek.T.AccountsItem, {
+                        account: e,
+                        onSelectAccount: () => {
+                          !e.is_disabled && r(e.loginid);
+                        },
+                      }),
+                    },
+                    e.loginid
+                  )
+                ),
+              },
+              t
+                ? null == n
+                  ? void 0
+                  : n.real.toLowerCase()
+                : n.demo.toLowerCase()
+            ),
+          });
+        },
+        eB = (e) => {
+          let {
+              modifiedCRAccountList: t,
+              modifiedMFAccountList: n,
+              switchAccount: i,
+              isVirtual: o,
+              tabs_labels: a,
+              is_low_risk_country: s,
+              oAuthLogout: r,
+              loginid: c,
+              is_logging_out: d,
+            } = e,
+            u = t && (null == t ? void 0 : t.length) > 0,
+            h = n && (null == n ? void 0 : n.length) > 0;
+          return (0, l.jsxs)(l.Fragment, {
+            children: [
+              u
+                ? (0, l.jsxs)(l.Fragment, {
+                    children: [
+                      (0, l.jsx)(eq, {
+                        modifiedCRAccountList: t,
+                        modifiedMFAccountList: n,
+                        switchAccount: i,
+                        isVirtual: o,
+                        tabs_labels: a,
+                        is_low_risk_country: s,
+                      }),
+                      (0, l.jsx)(eO, {}),
+                    ],
+                  })
+                : (0, l.jsxs)(l.Fragment, {
+                    children: [
+                      (0, l.jsx)(eU, {
+                        is_low_risk_country: s,
+                        isVirtual: o,
+                        tabs_labels: a,
+                      }),
+                      (0, l.jsx)(eO, {}),
+                    ],
+                  }),
+              h &&
+                (0, l.jsxs)(l.Fragment, {
+                  children: [
+                    (0, l.jsx)(eV, {
+                      modifiedMFAccountList: n,
+                      switchAccount: i,
+                      isVirtual: o,
+                      tabs_labels: a,
+                      is_low_risk_country: s,
+                    }),
+                    (0, l.jsx)(eO, {}),
+                  ],
+                }),
+              (0, l.jsx)(eD, { oAuthLogout: r, loginid: c, is_logging_out: d }),
+            ],
+          });
+        };
+      var eX = n("17481");
+      let e$ = (0, i.lazy)(() => n.e("932").then(n.bind(n, 67568))),
+        eW = { demo: (0, A.NC)("Demo"), real: (0, A.NC)("Real") },
+        eG = (e) => {
+          var t;
+          let {
+              isVirtual: n,
+              modifiedCRAccountList: o,
+              modifiedMFAccountList: a,
+              modifiedVRTCRAccountList: s,
+              switchAccount: c,
+              activeLoginId: d,
+              client: u,
+            } = e,
+            { oAuthLogout: h } = (0, r.q)({
+              handleLogout: async () => u.logout(),
+              client: u,
+            }),
+            m = (0, eX.Gz)().includes(
+              (null === (t = u.account_settings) || void 0 === t
+                ? void 0
+                : t.country_code) ?? ""
+            ),
+            g = !!n;
+          return ((0, i.useEffect)(() => {
+            var e, t;
+            let l =
+              null ===
+                (e = document.getElementsByClassName(
+                  "account-switcher-panel"
+                )) || void 0 === e
+                ? void 0
+                : e[0];
+            !n &&
+              l &&
+              ((l.style.maxHeight = "70vh"),
+              null === (t = (0, eZ._)(".deriv-accordion__content", l)) ||
+                void 0 === t ||
+                t.then((e) => {
+                  e && (e.style.maxHeight = "70vh");
+                }));
+          }, [n]),
+          g)
+            ? (0, l.jsx)(l.Fragment, {
+                children: (0, l.jsx)(eP, {
+                  modifiedVRTCRAccountList: s,
+                  switchAccount: c,
+                  activeLoginId: d,
+                  isVirtual: g,
+                  tabs_labels: eW,
+                  oAuthLogout: h,
+                  is_logging_out: u.is_logging_out,
+                }),
+              })
+            : (0, l.jsx)(eB, {
+                modifiedCRAccountList: o,
+                modifiedMFAccountList: a,
+                switchAccount: c,
+                isVirtual: g,
+                tabs_labels: eW,
+                is_low_risk_country: m,
+                oAuthLogout: h,
+                loginid: d,
+                is_logging_out: u.is_logging_out,
+              });
+        },
+        eK = (0, O.Pi)((e) => {
+          var t, n;
+          let { activeAccount: o } = e,
+            { isDesktop: a } = (0, d.F)(),
+            { accountList: s } = (0, ex.T)(),
+            { ui: r, run_panel: c, client: u } = (0, es.oR)(),
+            { accounts: h } = u,
+            {
+              toggleAccountsDialog: m,
+              is_accounts_switcher_on: g,
+              account_switcher_disabled_message: x,
+            } = r,
+            { is_stop_button_visible: p } = c,
+            v = Object.keys(h).some((e) => "wallet" === h[e].account_category),
+            _ = (0, i.useMemo)(
+              () =>
+                null == s
+                  ? void 0
+                  : s.map((e) => {
+                      var t, n, i, a, s, r, c, d;
+                      return {
+                        ...e,
+                        balance: (0, B.oC5)(
+                          (null === (a = u.all_accounts_balance) || void 0 === a
+                            ? void 0
+                            : null === (i = a.accounts) || void 0 === i
+                            ? void 0
+                            : null ===
+                                (n = i[null == e ? void 0 : e.loginid]) ||
+                              void 0 === n
+                            ? void 0
+                            : null === (t = n.balance) || void 0 === t
+                            ? void 0
+                            : t.toFixed((0, B.i4S)(e.currency))) ?? "0"
+                        ),
+                        currencyLabel: (null == e ? void 0 : e.is_virtual)
+                          ? eW.demo
+                          : (null === (c = u.website_status) || void 0 === c
+                              ? void 0
+                              : null === (r = c.currencies_config) ||
+                                void 0 === r
+                              ? void 0
+                              : null ===
+                                  (s = r[null == e ? void 0 : e.currency]) ||
+                                void 0 === s
+                              ? void 0
+                              : s.name) ?? (null == e ? void 0 : e.currency),
+                        icon: (0, l.jsx)(eg, {
+                          currency:
+                            null == e
+                              ? void 0
+                              : null === (d = e.currency) || void 0 === d
+                              ? void 0
+                              : d.toLowerCase(),
+                          isVirtual: !!(null == e ? void 0 : e.is_virtual),
+                        }),
+                        isVirtual: !!(null == e ? void 0 : e.is_virtual),
+                        isActive:
+                          (null == e ? void 0 : e.loginid) ===
+                          (null == o ? void 0 : o.loginid),
+                      };
+                    }),
+              [
+                s,
+                null === (t = u.all_accounts_balance) || void 0 === t
+                  ? void 0
+                  : t.accounts,
+                null === (n = u.website_status) || void 0 === n
+                  ? void 0
+                  : n.currencies_config,
+                null == o ? void 0 : o.loginid,
+              ]
+            ),
+            b = (0, i.useMemo)(
+              () =>
+                (null == _
+                  ? void 0
+                  : _.filter((e) => {
+                      var t;
+                      return null == e
+                        ? void 0
+                        : null === (t = e.loginid) || void 0 === t
+                        ? void 0
+                        : t.includes("CR");
+                    })) ?? [],
+              [_]
+            ),
+            j = (0, i.useMemo)(
+              () =>
+                (null == _
+                  ? void 0
+                  : _.filter((e) => {
+                      var t;
+                      return null == e
+                        ? void 0
+                        : null === (t = e.loginid) || void 0 === t
+                        ? void 0
+                        : t.includes("MF");
+                    })) ?? [],
+              [_]
+            ),
+            f = (0, i.useMemo)(
+              () =>
+                (null == _
+                  ? void 0
+                  : _.filter((e) => {
+                      var t;
+                      return null == e
+                        ? void 0
+                        : null === (t = e.loginid) || void 0 === t
+                        ? void 0
+                        : t.includes("VRT");
+                    })) ?? [],
+              [_]
+            ),
+            w = async (e) => {
+              if (e.toString() === (null == o ? void 0 : o.loginid)) return;
+              let t = JSON.parse(localStorage.getItem("accountsList") ?? "{}")[
+                e
+              ];
+              if (!t) return;
+              localStorage.setItem("authToken", t),
+                localStorage.setItem("active_loginid", e.toString()),
+                await (null === eN.api_base || void 0 === eN.api_base
+                  ? void 0
+                  : eN.api_base.init(!0));
+              let n = new URLSearchParams(window.location.search),
+                l = _.find((t) => t.loginid === e.toString());
+              if (!l) return;
+              let i = l.is_virtual ? "demo" : l.currency;
+              n.set("account", i),
+                window.history.pushState(
+                  {},
+                  "",
+                  `${window.location.pathname}?${n.toString()}`
+                );
+            };
+          return (
+            o &&
+            (v
+              ? (0, l.jsx)(i.Suspense, {
+                  fallback: (0, l.jsx)(eL.a, {}),
+                  children: (0, l.jsx)(e$, {
+                    is_dialog_on: g,
+                    toggleDialog: m,
+                  }),
+                })
+              : (0, l.jsx)(eI.Z, {
+                  className: "run-panel__info",
+                  classNameBubble: "run-panel__info--bubble",
+                  alignment: "bottom",
+                  message: x,
+                  zIndex: "5",
+                  children: (0, l.jsxs)(ek.T, {
+                    activeAccount: o,
+                    isDisabled: p,
+                    tabsLabels: eW,
+                    modalContentStyle: {
+                      content: { top: a ? "30%" : "50%", borderRadius: "10px" },
+                    },
+                    children: [
+                      (0, l.jsx)(ek.T.Tab, {
+                        title: eW.real,
+                        children: (0, l.jsx)(eG, {
+                          modifiedCRAccountList: b,
+                          modifiedMFAccountList: j,
+                          switchAccount: w,
+                          activeLoginId: null == o ? void 0 : o.loginid,
+                          client: u,
+                        }),
+                      }),
+                      (0, l.jsx)(ek.T.Tab, {
+                        title: eW.demo,
+                        children: (0, l.jsx)(eG, {
+                          modifiedVRTCRAccountList: f,
+                          switchAccount: w,
+                          isVirtual: !0,
+                          activeLoginId: null == o ? void 0 : o.loginid,
+                          client: u,
+                        }),
+                      }),
+                    ],
+                  }),
+                }))
+          );
+        });
+      var eJ = n("39523"),
+        eQ = n("38051"),
+        eY = n("39590"),
+        e0 = n("14393"),
+        e1 = n("34215"),
+        e6 = n("44741");
+      e0.Z,
+        (0, A.NC)(
+          "A whole new trading experience on a powerful yet easy to use platform."
+        ),
+        B.xOw.trade,
+        e0.Z,
+        e1.Z,
+        (0, A.NC)("Automated trading at your fingertips. No coding needed."),
+        B.xOw.bot,
+        e1.Z,
+        e6.Z,
+        (0, A.NC)(
+          "Trade the world’s markets with our popular user-friendly platform."
+        ),
+        B.xOw.smarttrader,
+        e6.Z;
+      let e2 = {
+          as: "a",
+          href: B.xOw.traders_hub,
+          icon: (0, l.jsx)(eQ.Z, { iconSize: "xs" }),
+          label: "Trader's Hub",
+        },
+        e9 = [
+          {
+            as: "a",
+            href: B.xOw.reports,
+            icon: (0, l.jsx)(eY.Z, { iconSize: "xs" }),
+            label: (0, A.NC)("Reports"),
+          },
+        ],
+        e3 = (0, O.Pi)(() => {
+          let { localize: e } = (0, A.T_)(),
+            { isDesktop: t } = (0, d.F)(),
+            n = (0, es.oR)();
+          if (!n) return null;
+          let { is_logged_in: i } = n.client;
+          return (0, l.jsx)(l.Fragment, {
+            children:
+              i &&
+              (t
+                ? e9.map((t) => {
+                    let { as: n, href: i, icon: o, label: a } = t;
+                    return (0, l.jsx)(
+                      eJ.s,
+                      {
+                        as: n,
+                        className: "app-header__menu",
+                        href: i,
+                        leftComponent: o,
+                        children: (0, l.jsx)(ec.x, { children: e(a) }),
+                      },
+                      a
+                    );
+                  })
+                : (0, l.jsx)(
+                    eJ.s,
+                    {
+                      as: e9["1"].as,
+                      className: "flex gap-2 p-5",
+                      href: e9["1"].href,
+                      leftComponent: e9["1"].icon,
+                      children: (0, l.jsx)(ec.x, {
+                        children: e(e9["1"].label),
+                      }),
+                    },
+                    e9["1"].label
+                  )),
+          });
+        });
+      e3.TradershubLink = () =>
+        (0, l.jsx)(
+          eJ.s,
+          {
+            as: "a",
+            className: "app-header__menu",
+            href: e2.href,
+            leftComponent: e2.icon,
+            children: (0, l.jsx)(ec.x, { children: e2.label }),
+          },
+          e2.label
+        );
+      var e7 = n("17934"),
+        e4 = n("41301"),
+        e8 = n("68782");
+      let e5 = (e) => {
+        let { buttonText: t, onClick: n } = e,
+          { isDesktop: i } = (0, d.F)();
+        return (0, l.jsxs)("button", {
+          className: "flex items-center w-full pt-8 p-[3.2rem]",
+          onClick: n,
+          children: [
+            (0, l.jsx)(e8.Z, { iconSize: "xs", fill: "var(--text-general)" }),
+            (0, l.jsx)(ec.x, {
+              className: "ml-[1.6rem]",
+              size: i ? "md" : "lg",
+              weight: "bold",
+              children: t,
+            }),
+          ],
+        });
+      };
+      var te = n("68534"),
+        tt = n("93217");
+      let tn = (e) => {
+          let { localize: t } = (0, A.T_)(),
+            { is_dark_mode_on: n, toggleTheme: i } = (0, D.Z)(),
+            { oAuthLogout: o } = (0, r.q)({
+              handleLogout: async () => (null == e ? void 0 : e.logout()),
+              client: e,
+            });
+          return {
+            config: [
+              [
+                {
+                  as: "button",
+                  label: t("Dark theme"),
+                  LeftComponent: te.Z,
+                  RightComponent: (0, l.jsx)(tt.Z, { value: n, onChange: i }),
+                },
+              ],
+              (null == e ? void 0 : e.is_logged_in)
+                ? [
+                    {
+                      as: "button",
+                      label: t("Log out"),
+                      LeftComponent: eE.Z,
+                      onClick: o,
+                      removeBorderBottom: !0,
+                    },
+                  ]
+                : [],
+            ],
+          };
+        },
+        tl = (0, O.Pi)(() => {
+          let { isDesktop: e } = (0, d.F)(),
+            { client: t } = (0, es.oR)(),
+            n = e ? "sm" : "md",
+            { config: i } = tn(t);
+          return (0, l.jsx)("div", {
+            className: "mobile-menu__content",
+            children: (0, l.jsx)("div", {
+              className: "mobile-menu__content__items",
+              children: i.map((e, t) => {
+                let i = e.find((e) => {
+                  let { removeBorderBottom: t } = e;
+                  return t;
+                });
+                return (0, l.jsx)(
+                  "div",
+                  {
+                    className: (0, o.Z)(
+                      "mobile-menu__content__items--padding",
+                      { "mobile-menu__content__items--bottom-border": !i }
+                    ),
+                    "data-testid": "dt_menu_item",
+                    children: e.map((e) => {
+                      let {
+                          LeftComponent: t,
+                          RightComponent: i,
+                          as: a,
+                          href: s,
+                          label: r,
+                          onClick: c,
+                          target: d,
+                        } = e,
+                        u = "Oruchotrader.com" === r;
+                      return "a" === a
+                        ? (0, l.jsx)(
+                            eJ.s,
+                            {
+                              as: "a",
+                              className: (0, o.Z)(
+                                "mobile-menu__content__items__item",
+                                { "mobile-menu__content__items__icons": !u }
+                              ),
+                              disableHover: !0,
+                              href: s,
+                              leftComponent: (0, l.jsx)(t, {
+                                className:
+                                  "mobile-menu__content__items--right-margin",
+                                height: 16,
+                                width: 16,
+                              }),
+                              target: d,
+                              children: (0, l.jsx)(ec.x, {
+                                size: n,
+                                children: r,
+                              }),
+                            },
+                            r
+                          )
+                        : (0, l.jsx)(
+                            eJ.s,
+                            {
+                              as: "button",
+                              className: (0, o.Z)(
+                                "mobile-menu__content__items__item",
+                                { "mobile-menu__content__items__icons": !u }
+                              ),
+                              disableHover: !0,
+                              leftComponent: (0, l.jsx)(t, {
+                                className:
+                                  "mobile-menu__content__items--right-margin",
+                                iconSize: "xs",
+                              }),
+                              onClick: c,
+                              rightComponent: i,
+                              children: (0, l.jsx)(ec.x, {
+                                size: n,
+                                children: r,
+                              }),
+                            },
+                            r
+                          );
+                    }),
+                  },
+                  t
+                );
+              }),
+            }),
+          });
+        }),
+        ti = (e) => {
+          let { hideLanguageSetting: t, openLanguageSetting: n } = e,
+            { currentLang: o, localize: a } = (0, A.T_)(),
+            { isDesktop: s } = (0, d.F)(),
+            r = (0, i.useMemo)(() => {
+              var e;
+              return null ===
+                (e = T.find((e) => {
+                  let { code: t } = e;
+                  return t === o;
+                })) || void 0 === e
+                ? void 0
+                : e.placeholderIconInMobile;
+            }, [o]);
+          return (0, l.jsxs)("div", {
+            className: "mobile-menu__header",
+            children: [
+              (0, l.jsx)(ec.x, {
+                size: s ? "md" : "lg",
+                weight: "bold",
+                children: a("Menu"),
+              }),
+              !t &&
+                (0, l.jsxs)("button", {
+                  className: "mobile-menu__header__language items-center",
+                  onClick: n,
+                  children: [
+                    r,
+                    (0, l.jsx)(ec.x, {
+                      className: "ml-[0.4rem]",
+                      size: s ? "xs" : "sm",
+                      weight: "bold",
+                      children: o,
+                    }),
+                  ],
+                }),
+            ],
+          });
+        };
+      var to = n("89816");
+      let ta = (e) => {
+        let { onClick: t } = e;
+        return (0, l.jsx)("button", {
+          onClick: t,
+          children: (0, l.jsx)(to.Z, {
+            iconSize: "xs",
+            fill: "var(--text-general)",
+          }),
+        });
+      };
+      var ts = n("32767");
+      let tr = () => {
+          let [e, t] = (0, i.useState)(!1),
+            {
+              currentLang: n = "EN",
+              localize: o,
+              switchLanguage: a,
+            } = (0, A.T_)(),
+            { hideModal: s, isModalOpenFor: r, showModal: c } = m(),
+            { isDesktop: u } = (0, d.F)(),
+            h = () => t(!1),
+            x = !!r("MobileLanguagesDrawer"),
+            p = (e) => {
+              window.open(e, "_blank");
+            },
+            v = () => {
+              window.location.reload();
+            };
+          return u
+            ? null
+            : (0, l.jsxs)("div", {
+                className: "mobile-menu",
+                children: [
+                  (0, l.jsxs)("div", {
+                    className: "mobile-menu__toggle",
+                    children: [
+                      (0, l.jsx)(ta, { onClick: () => t(!0) }),
+                      (0, l.jsx)("div", {
+                        onClick: () => p("https://t.me/oruchotradersite"),
+                        children: (0, l.jsx)(eb.Ww5, {
+                          size: 20,
+                          style: { color: "#60b5ff" },
+                        }),
+                      }),
+                      (0, l.jsx)("div", {
+                        onClick: () => v(),
+                        children: (0, l.jsx)(ts.e8N, {
+                          size: 20,
+                          style: { color: "#29dfc0" },
+                        }),
+                      }),
+                    ],
+                  }),
+                  (0, l.jsxs)(e7.d, {
+                    isOpen: e,
+                    onCloseDrawer: h,
+                    width: "29.5rem",
+                    children: [
+                      (0, l.jsx)(e7.d.Header, {
+                        onCloseDrawer: h,
+                        children: (0, l.jsx)(ti, {
+                          hideLanguageSetting: x,
+                          openLanguageSetting: () => c("MobileLanguagesDrawer"),
+                        }),
+                      }),
+                      (0, l.jsx)(e7.d.Content, {
+                        children: x
+                          ? (0, l.jsxs)(l.Fragment, {
+                              children: [
+                                (0, l.jsx)("div", {
+                                  className: "mobile-menu__back-btn",
+                                  children: (0, l.jsx)(e5, {
+                                    buttonText: o("Language"),
+                                    onClick: s,
+                                  }),
+                                }),
+                                (0, l.jsx)(e4.I, {
+                                  isOpen: !0,
+                                  languages: T,
+                                  onClose: s,
+                                  onLanguageSwitch: (e) => {
+                                    a(e),
+                                      window.location.replace(g()),
+                                      window.location.reload();
+                                  },
+                                  selectedLanguage: n,
+                                  wrapperClassName:
+                                    "mobile-menu__language-drawer",
+                                }),
+                              ],
+                            })
+                          : (0, l.jsx)(tl, {}),
+                      }),
+                      (0, l.jsxs)(e7.d.Footer, {
+                        className: "mobile-menu__footer",
+                        children: [(0, l.jsx)(ed, {}), (0, l.jsx)(ei, {})],
+                      }),
+                    ],
+                  }),
+                ],
+              });
+        },
+        tc = (0, O.Pi)(() => {
+          let { isDesktop: e } = (0, d.F)(),
+            { isAuthorizing: t, activeLoginid: n } = (0, ex.T)(),
+            { client: i } = (0, es.oR)() ?? {},
+            { data: a } = ep({
+              allBalanceData: null == i ? void 0 : i.all_accounts_balance,
+            }),
+            { isOAuth2Enabled: s } = (0, r.q)();
+          return (0, l.jsxs)(ev.h, {
+            className: (0, o.Z)("app-header", {
+              "app-header--desktop": e,
+              "app-header--mobile": !e,
+            }),
+            children: [
+              (0, l.jsxs)(e_.i, {
+                variant: "left",
+                children: [
+                  (0, l.jsx)(ef, {}),
+                  (0, l.jsx)(tr, {}),
+                  e && (0, l.jsx)(e3, {}),
+                ],
+              }),
+              (0, l.jsx)(e_.i, {
+                variant: "right",
+                children: t
+                  ? (0, l.jsx)(eC, { isLoggedIn: !0, isMobile: !e, speed: 3 })
+                  : n
+                  ? (0, l.jsx)(l.Fragment, {
+                      children: (0, l.jsx)(eK, { activeAccount: a }),
+                    })
+                  : (0, l.jsxs)("div", {
+                      className: "auth-actions",
+                      children: [
+                        (0, l.jsx)(eh.Z, {
+                          tertiary: !0,
+                          onClick: async () => {
+                            s
+                              ? await (0, c.P6)({
+                                  redirectCallbackUri: `${window.location.origin}/callback`,
+                                })
+                              : window.location.replace((0, B.O2o)());
+                          },
+                          children: (0, l.jsx)(A.Xx, {
+                            i18n_default_text: "Log in",
+                          }),
+                        }),
+                        (0, l.jsx)(eh.Z, {
+                          primary: !0,
+                          onClick: () => {
+                            window.open(B.xOw.signup);
+                          },
+                          children: (0, l.jsx)(A.Xx, {
+                            i18n_default_text: "Sign up",
+                          }),
+                        }),
+                      ],
+                    }),
+              }),
+            ],
+          });
+        }),
+        td = (e) => {
+          let { children: t } = e,
+            n = localStorage.getItem("theme") ?? "light",
+            { ui: o } = (0, es.oR)() ?? { ui: { setDevice: () => {} } },
+            { setDevice: a } = o,
+            { isDesktop: s, isMobile: r, isTablet: c } = (0, d.F)();
+          return (
+            (0, i.useEffect)(() => {
+              let e = document.querySelector("body");
+              e &&
+                ("light" === n
+                  ? (e.classList.remove("theme--dark"),
+                    e.classList.add("theme--light"))
+                  : (e.classList.remove("theme--light"),
+                    e.classList.add("theme--dark")));
+            }, [n]),
+            (0, i.useEffect)(() => {
+              r ? a("mobile") : c ? a("tablet") : a("desktop");
+            }, [s, r, c, a]),
+            (0, l.jsx)("div", { className: "main-body", children: t })
+          );
+        },
+        tu = () => {
+          let { isDesktop: e } = (0, d.F)(),
+            { isOAuth2Enabled: t } = (0, r.q)(),
+            n = "/callback" === window.location.pathname,
+            u = "true" === a.Z.get("logged_state"),
+            h = window.location.pathname.includes("endpoint"),
+            m =
+              Object.keys(
+                JSON.parse(localStorage.getItem("accountsList") ?? "{}")
+              ).length > 0;
+          return (
+            (0, i.useEffect)(() => {
+              u &&
+                !m &&
+                t &&
+                !h &&
+                !n &&
+                (0, c.P6)({
+                  redirectCallbackUri: `${window.location.origin}/callback`,
+                });
+            }, [u, m, t, h, n]),
+            (0, l.jsxs)("div", {
+              className: (0, o.Z)("layout", { responsive: e }),
+              children: [
+                !n && (0, l.jsx)(tc, {}),
+                (0, l.jsx)(td, { children: (0, l.jsx)(s.j3, {}) }),
+                !n && e && (0, l.jsx)(eu, {}),
+              ],
+            })
+          );
+        };
+    },
+    30394: function (e, t, n) {
+      n.d(t, { Z: () => g });
+      var l = n("85893"),
+        i = n("67294"),
+        o = n("63387"),
+        a = n.n(o),
+        s = n("82106"),
+        r = n("86278"),
+        c = n("14244"),
+        d = n("26088"),
+        u = n("92868"),
+        h = n("2502"),
+        m = n("45452");
+      let g = (e) => {
+        let {
+            alignment: t,
+            children: n,
+            className: o,
+            classNameBubble: g,
+            classNameTarget: x,
+            classNameTargetIcon: p,
+            counter: v,
+            disable_message_icon: _,
+            disable_target_icon: b,
+            has_error: j,
+            icon: f,
+            id: w,
+            is_open: y,
+            is_bubble_hover_enabled: C,
+            margin: I = 0,
+            message: N,
+            onBubbleClose: Z,
+            onBubbleOpen: L,
+            onClick: k = () => void 0,
+            relative_render: z = !1,
+            should_disable_pointer_events: S = !1,
+            should_show_cursor: M,
+            zIndex: E = "1",
+            data_testid: F,
+            arrow_styles: T,
+          } = e,
+          A = i.useRef(),
+          [R, O] = i.useState(void 0),
+          [D, P] = i.useState(!1),
+          { isDesktop: V } = (0, h.F)(),
+          [H, U] = (0, r.X)(null, !0),
+          [q, B] = (0, r.m)(),
+          X = i.useMemo(() => !V && void 0 === y, [V, y]);
+        i.useEffect(() => {
+          A.current && O(A.current);
+        }, [j]),
+          i.useEffect(() => {
+            !U && X && P(!1);
+          }, [U, X]);
+        let $ = () => {
+            L && L();
+          },
+          W = () => {
+            Z && Z();
+          },
+          G = a()(p, f),
+          K = U && N && (!X || D);
+        return (0, l.jsxs)("div", {
+          ref: H,
+          className: a()({ "dc-popover__wrapper": z }),
+          onClick: (e) => {
+            k(e), X && P(!D);
+          },
+          "data-testid": "dt_popover_wrapper",
+          children: [
+            z &&
+              (0, l.jsx)("div", {
+                className: "dc-popover__container",
+                style: { zIndex: E },
+                children: (0, l.jsx)("div", {
+                  ref: A,
+                  className: "dc-popover__container-relative",
+                  "data-testid": "dt_popover_relative_container",
+                }),
+              }),
+            (R || !z) &&
+              (0, l.jsx)(s.Popover, {
+                isOpen: y ?? (K || (C && B)),
+                positions: [t],
+                padding: I + 8,
+                containerClassName: a()({
+                  "react-tiny-popover-container--disabled-pointer-event": S,
+                  "react-tiny-popover-cursor-option": M,
+                }),
+                ...(z
+                  ? {
+                      parentElement: R,
+                      contentLocation: (e) => {
+                        let { childRect: n, popoverRect: l, nudgedLeft: i } = e,
+                          o = document.body.clientWidth,
+                          a = n.right + (l.width - n.width / 2),
+                          s = 0,
+                          r = 0;
+                        switch (t) {
+                          case "left":
+                            (r =
+                              -1 *
+                              Math.abs((l.height > l.width ? i : l.width) + I)),
+                              (s =
+                                n.height > l.height
+                                  ? (n.height - l.height) / 2
+                                  : -(((l.height - n.height) / 2) * 1));
+                            break;
+                          case "right":
+                            (r = l.width + I),
+                              (s =
+                                n.height > l.height
+                                  ? (n.height - l.height) / 2
+                                  : -(((l.height - n.height) / 2) * 1));
+                            break;
+                          case "top":
+                            (r = a > o ? -1 * Math.abs(a - o) : 0),
+                              (s = -1 * Math.abs(l.height + I));
+                            break;
+                          case "bottom":
+                            (r = a > o ? -1 * Math.abs(a - o) : 0),
+                              (s = n.height + I);
+                        }
+                        return { top: s, left: r };
+                      },
+                    }
+                  : { containerStyle: { zIndex: E } }),
+                content: (e) => {
+                  let { position: t, childRect: n, popoverRect: i } = e;
+                  return (0, l.jsx)(s.ArrowContainer, {
+                    position: t,
+                    childRect: n,
+                    popoverRect: i,
+                    arrowColor: j
+                      ? "var(--status-danger)"
+                      : "var(--general-active)",
+                    arrowSize: 5,
+                    arrowStyle: z
+                      ? {
+                          borderTop: "10px solid transparent",
+                          borderLeft: "10px solid transparent",
+                          borderRight: `10px solid ${
+                            j ? "var(--status-danger)" : "var(--general-active)"
+                          }`,
+                          transform: "rotate(315deg)",
+                          right: "0px",
+                          top: "5px",
+                          height: "10px",
+                          margin: "auto",
+                          bottom: "0px",
+                        }
+                      : { ...T },
+                    children: (0, l.jsxs)("div", {
+                      id: w,
+                      onMouseEnter: $,
+                      onMouseLeave: W,
+                      className: a()(g, "dc-popover__bubble", {
+                        "dc-popover__bubble--error": j,
+                      }),
+                      ref: q,
+                      children: [
+                        !_ &&
+                          "info" === f &&
+                          (0, l.jsx)("i", {
+                            className: "dc-popover__bubble__icon",
+                            children: (0, l.jsx)(c.Z, {}),
+                          }),
+                        (j &&
+                          (0, l.jsx)(m.Z, {
+                            size: "xxs",
+                            color: "colored-background",
+                            children: N,
+                          })) ||
+                          (0, l.jsx)(m.Z, {
+                            lineHeight: "md",
+                            size: "xxs",
+                            className: "dc-popover__bubble__text",
+                            children: N,
+                          }),
+                      ],
+                    }),
+                  });
+                },
+                children: (0, l.jsx)("div", {
+                  "data-testid": F,
+                  className: a()("dc-popover", o),
+                  id: w,
+                  children: (0, l.jsxs)("div", {
+                    className: a()(x, "dc-popover__target"),
+                    children: [
+                      !b &&
+                        (0, l.jsxs)("i", {
+                          className: N
+                            ? "dc-popover__target__icon"
+                            : "dc-popover__target__icon--disabled",
+                          children: [
+                            "info" === f && (0, l.jsx)(c.Z, { className: G }),
+                            "question" === f &&
+                              (0, l.jsx)(u.Z, { className: G }),
+                            "dot" === f && (0, l.jsx)(d.Z, { className: G }),
+                            "counter" === f &&
+                              (0, l.jsx)("span", { className: G, children: v }),
+                          ],
+                        }),
+                      n,
+                    ],
+                  }),
+                }),
+              }),
+          ],
+        });
+      };
+    },
+    86278: function (e, t, n) {
+      n.d(t, {
+        X: function () {
+          return i;
+        },
+        m: function () {
+          return o;
+        },
+      });
+      var l = n(67294);
+      let i = (e, t) => {
+          let [n, i] = l.useState(!1),
+            o = l.useRef(null),
+            a = e || o,
+            s = () => i(!0),
+            r = () => i(!1);
+          return (
+            l.useEffect(() => {
+              let e = a.current;
+              if (e)
+                return (
+                  t
+                    ? (e.addEventListener("mouseenter", s),
+                      e.addEventListener("mouseleave", r))
+                    : (e.addEventListener("mouseover", s),
+                      e.addEventListener("mouseout", r)),
+                  () => {
+                    t
+                      ? (e.removeEventListener("mouseenter", s),
+                        e.removeEventListener("mouseleave", r))
+                      : (e.removeEventListener("mouseover", s),
+                        e.removeEventListener("mouseout", r));
+                  }
+                );
+            }, [a, t]),
+            [a, n]
+          );
+        },
+        o = () => {
+          let [e, t] = l.useState(!1),
+            n = l.useCallback(() => t(!0), []),
+            i = l.useCallback(() => t(!1), []),
+            o = l.useRef(null);
+          return [
+            l.useCallback(
+              (e) => {
+                o.current &&
+                  (o.current.removeEventListener("mouseover", n),
+                  o.current.removeEventListener("mouseout", i)),
+                  (o.current = e),
+                  o.current &&
+                    (o.current.addEventListener("mouseover", n),
+                    o.current.addEventListener("mouseout", i));
+              },
+              [n, i]
+            ),
+            e,
+          ];
+        };
+    },
+    83257: function (e, t, n) {
+      n.d(t, {
+        Z: function () {
+          return o;
+        },
+      });
+      var l = n(67294),
+        i = n(83274);
+      let o = () => {
+        let { ui: e } = (0, i.oR)() ?? {
+            ui: { setDarkMode: () => {}, is_dark_mode_on: !1 },
+          },
+          { setDarkMode: t, is_dark_mode_on: n } = e;
+        return {
+          toggleTheme: (0, l.useCallback)(() => {
+            let e = document.querySelector("body");
+            e &&
+              (e.classList.contains("theme--dark")
+                ? (localStorage.setItem("theme", "light"),
+                  e.classList.remove("theme--dark"),
+                  e.classList.add("theme--light"),
+                  t(!1))
+                : (localStorage.setItem("theme", "dark"),
+                  e.classList.remove("theme--light"),
+                  e.classList.add("theme--dark"),
+                  t(!0)));
+          }, [t]),
+          is_dark_mode_on: n,
+          setDarkMode: t,
+        };
+      };
+    },
+  },
+]);
